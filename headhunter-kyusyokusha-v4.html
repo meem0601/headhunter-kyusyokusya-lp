@@ -31,7 +31,7 @@ body{background:#fff;color:var(--text);font-family:var(--fj);line-height:1.6;wor
 .fcta-text{writing-mode:vertical-rl;font-family:var(--fj);font-size:11px;font-weight:700;letter-spacing:.2em;color:#fff}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;align-items:center;padding:0 24px;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.07);transition:box-shadow .3s}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;align-items:center;justify-content:center;padding:0 24px;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.07);transition:box-shadow .3s}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
 .nav-logo-name{font-family:var(--fd);font-size:20px;letter-spacing:.16em;color:var(--indigo-d)}
 .nav-logo-name em{font-style:normal;color:var(--indigo)}
@@ -579,7 +579,7 @@ footer{background:#0B0B1A;padding:48px 24px 32px}
 
 
 <nav id="mainNav">
-  <a class="nav-logo" href="#"><img src="images/img-1.webp" alt="HEADHUNTER" style="height:32px;display:block"></a>
+  <a class="nav-logo" href="#"><img src="images/img-1.webp" alt="HEADHUNTER" style="height:40px;display:block"></a>
 </nav>
 
 <!-- 01 HERO -->
@@ -757,7 +757,7 @@ footer{background:#0B0B1A;padding:48px 24px 32px}
       <h2 class="svc-h2 fu">転職支援のプロが<br><em>マンツーマン支援</em></h2>
       <p class="svc-lead fu">厳選された転職エージェントが、あなたの経歴・希望に合わせたオーダーメイドの支援を行います。</p>
       <div style="overflow:hidden;margin-top:24px" class="fu">
-        <div style="display:flex;flex-flow:column wrap;gap:8px;animation:agentSlide 30s linear infinite;width:max-content;height:296px">
+        <div style="display:flex;gap:8px;animation:agentSlide 30s linear infinite;width:max-content;margin-bottom:8px">
           <!-- 1 -->
           <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
             <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
@@ -814,57 +814,79 @@ footer{background:#0B0B1A;padding:48px 24px 32px}
             <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">笑顔で働ける場所、一緒に探します。</div>
             <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">W.K</div>
           </div>
-          <!-- duplicate for seamless loop -->
+          <!-- 9 -->
           <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
             <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
             <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-5.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
             <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">転職は人生の転機。一緒に最高の選択を。</div>
             <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">T.K</div>
           </div>
-          <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
-            <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
-            <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-6.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
-            <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">あなたの「強み」、必ず見つけます。</div>
-            <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">S.Y</div>
-          </div>
-          <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
-            <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
-            <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-7.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
-            <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">不安を安心に変える伴走をします。</div>
-            <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">Y.M</div>
-          </div>
-          <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
-            <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
-            <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-8.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
-            <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">「ここで良かった」と思える転職を。</div>
-            <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">S.R</div>
-          </div>
+        </div>
+        <div style="display:flex;gap:8px;animation:agentSlide 35s linear infinite;width:max-content">
+          <!-- 1 -->
           <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
             <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
             <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-9.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
             <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">年収UPだけじゃない、納得の転職を。</div>
             <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">N.H</div>
           </div>
+          <!-- 2 -->
           <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
             <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
             <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-10.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
             <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">諦めなければ道は必ずあります。</div>
             <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">T.A</div>
           </div>
+          <!-- 3 -->
           <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
             <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
             <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-11.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
             <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">一人ひとりの物語に寄り添います。</div>
             <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">I.M</div>
           </div>
+          <!-- 4 -->
           <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
             <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
             <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-12.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
             <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">笑顔で働ける場所、一緒に探します。</div>
             <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">W.K</div>
           </div>
+          <!-- 5 -->
+          <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
+            <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
+            <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-5.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
+            <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">転職は人生の転機。一緒に最高の選択を。</div>
+            <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">T.K</div>
+          </div>
+          <!-- 6 -->
+          <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
+            <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
+            <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-6.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
+            <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">あなたの「強み」、必ず見つけます。</div>
+            <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">S.Y</div>
+          </div>
+          <!-- 7 -->
+          <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
+            <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
+            <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-7.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
+            <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">不安を安心に変える伴走をします。</div>
+            <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">Y.M</div>
+          </div>
+          <!-- 8 -->
+          <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
+            <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
+            <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-8.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
+            <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">「ここで良かった」と思える転職を。</div>
+            <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">S.R</div>
+          </div>
+          <!-- 9 -->
+          <div style="flex-shrink:0;width:110px;background:linear-gradient(135deg,#2820B0,#3530CC);border-radius:12px;padding:10px 8px 8px;color:#fff;text-align:center">
+            <div style="font-size:6px;background:rgba(255,255,255,.15);display:inline-block;padding:2px 6px;border-radius:6px;margin-bottom:4px">✦ HEADHUNTER 公認</div>
+            <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;margin:0 auto 5px;border:2px solid rgba(255,255,255,.3)"><img src="images/img-5.webp" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/></div>
+            <div style="font-family:var(--fj);font-size:9px;font-weight:700;color:#fff;line-height:1.35">転職は人生の転機。一緒に最高の選択を。</div>
+            <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:3px">T.K</div>
+          </div>
         </div>
-      </div>
     </div>
   </div>
 
