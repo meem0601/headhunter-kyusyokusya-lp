@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/headhunter-kyusyokusha-v4.html" }
+  ]
+}
