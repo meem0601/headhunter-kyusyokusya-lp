@@ -8,7 +8,7 @@ import { dirname, join, resolve, extname } from 'node:path'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const PORT = Number(process.env.PORT ?? 8123)
-const INDEX = 'headhunter-kyusyokusha-v4.html'
+const INDEX = 'headhunter-kyusyokusha-v7.html'
 
 const TYPES = {
   '.html': 'text/html; charset=utf-8',
