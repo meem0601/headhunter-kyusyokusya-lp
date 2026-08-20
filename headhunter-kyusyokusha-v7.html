@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HEADHUNTER｜完全紹介制の転職支援</title>
+<meta name="description" content="HEADHUNTERは、ご紹介のある方だけがご利用いただける完全紹介制の転職支援サービスです。審査を通過した公認エージェントが、厚生労働大臣の許可を受けた有料職業紹介事業として支援します。"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --lp-w:430px;
+  --blue:#0000D4;--blue-d:#0000B2;--blue-ll:#7A98FF;--tint:#EEF0FF;
+  --white:#fff;--gray-bg:#F7F5F2;--text:#1E1919;--sub:#5F5A59;--mute:#8A837E;--border:#E8E5E0;
+  --line:#06C755;
+  --fj:'Noto Sans JP',sans-serif;
+  --fe:'Poppins','Noto Sans JP',sans-serif;
+  --page-x:clamp(18px,5.4vw,24px);
+  --sy:clamp(46px,12vw,62px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px;background:var(--gray-bg)}
+body{font-family:var(--fj);color:var(--text);background:var(--gray-bg);line-height:1.85;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+p{text-wrap:pretty}
+h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
+
+.stage{display:none}
+.side-l,.side-r{display:none}
+@media (min-width:1120px){
+  .stage{display:block;position:fixed;inset:0;z-index:0;background:var(--gray-bg)}
+  .stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,110,.06) 1px,transparent 1px);background-size:20px 20px}
+  .side-l,.side-r{display:flex;flex-direction:column;position:fixed;top:50%;transform:translateY(-50%);z-index:2;width:266px}
+  .side-l{left:max(28px,calc(50% - 215px - 296px));gap:20px}
+  .side-r{right:max(28px,calc(50% - 215px - 296px));gap:12px}
+  .side-logo{display:flex;align-items:center;gap:9px}
+  .side-logo span{font-family:var(--fe);font-size:15px;font-weight:700;letter-spacing:.13em}
+  .side-promo{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:20px 18px}
+  .side-promo small{display:block;font-family:var(--fe);font-size:10.5px;font-weight:700;letter-spacing:.2em;color:var(--blue);margin-bottom:9px}
+  .side-promo strong{display:block;font-size:15.5px;font-weight:900;line-height:1.6}
+  .side-promo .meta{display:flex;gap:6px;margin:13px 0}
+  .side-promo .meta span{flex:1;text-align:center;font-size:10.5px;font-weight:700;color:var(--blue-d);background:var(--tint);border-radius:3px;padding:6px 3px}
+  .side-cta{display:flex;align-items:center;justify-content:space-between;background:var(--blue);color:#fff;font-size:13.5px;font-weight:800;padding:14px 16px;border-radius:6px}
+  .side-copy{font-family:var(--fe);font-size:11px;color:var(--mute)}
+  .side-menu-t{font-family:var(--fe);font-size:12.5px;font-weight:700;font-style:italic;letter-spacing:.14em;color:var(--blue)}
+  .side-r nav{display:flex;flex-direction:column}
+  .side-r nav a{display:flex;align-items:center;gap:10px;padding:12px 2px;font-size:13.5px;font-weight:700;border-bottom:1px solid var(--border);transition:color .2s}
+  .side-r nav a i{font-family:var(--fe);font-style:normal;font-size:10.5px;color:var(--blue-ll)}
+  .side-r nav a:hover{color:var(--blue)}
+  .side-r nav a b{margin-left:auto;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;font-size:10px;font-weight:400}
+}
+
+.col{position:relative;z-index:1;width:min(var(--lp-w),100%);margin:0 auto;background:var(--white);overflow:clip;border-inline:1px solid var(--border);padding-bottom:72px}
+@media (min-width:1120px){.col{padding-bottom:0}}
+
+.head{position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 var(--page-x);background:rgba(255,255,255,.97);border-bottom:1px solid var(--border)}
+.head-l{display:flex;align-items:center;gap:8px}
+.head-l span{font-family:var(--fe);font-size:13px;font-weight:700;letter-spacing:.13em}
+.head em{font-style:normal;font-size:10.5px;font-weight:700;color:var(--mute)}
+.head em b{color:var(--text);font-size:12px;margin-left:5px}
+
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:var(--blue);padding:34px var(--page-x) 24px}
+.hero::before{content:"";position:absolute;inset:-38px;z-index:0;opacity:.78;
+  background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
+  background-size:36px 36px,36px 36px;animation:grid 26s linear infinite}
+@keyframes grid{from{transform:translate(0,0)}to{transform:translate(36px,36px)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(122deg,transparent 0 58%,rgba(255,255,255,.09) 58.1%,transparent 58.45% 100%)}
+.hero>*{position:relative;z-index:1}
+.hero-slash{display:flex;align-items:center;justify-content:center;gap:10px;font-size:12.5px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:9px}
+.hero-slash::before,.hero-slash::after{content:"";width:13px;height:15px;border-left:2px solid rgba(255,255,255,.55)}
+.hero-slash::before{transform:rotate(-18deg)}
+.hero-slash::after{transform:rotate(18deg);border-left:0;border-right:2px solid rgba(255,255,255,.55)}
+.hero h1{font-size:clamp(23px,6.4vw,29px);font-weight:900;line-height:1.45;letter-spacing:-.03em;text-align:center}
+.hero h1 em{font-style:normal;border-bottom:4px solid var(--blue-ll);padding-bottom:2px}
+.hero-lead{margin-top:14px;font-size:13px;line-height:1.9;color:rgba(255,255,255,.82);text-align:center}
+.hero-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:26px;margin-bottom:16px}
+.hero-badges span{display:grid;place-items:center;text-align:center;font-size:10.5px;font-weight:700;letter-spacing:-.02em;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.34);border-radius:3px;padding:9px 3px}
+.hero-note{margin-top:10px;font-size:9.5px;line-height:1.7;color:rgba(255,255,255,.6);text-align:center}
+
+.btn{position:relative;display:grid;grid-template-columns:22px minmax(0,1fr) 28px;align-items:center;gap:9px;
+  width:100%;padding:16px 16px;border-radius:6px;font-size:15.5px;font-weight:900;
+  color:var(--text);background:linear-gradient(118deg,#fff 0%,#F9F9FF 58%,#E9EDFF 100%);
+  border:1px solid rgba(255,255,255,.92);box-shadow:0 14px 30px rgba(0,0,64,.24)}
+.btn::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--line)}
+.btn .lbl{text-align:center}
+.btn .arw{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--fe);font-size:14px}
+.btn--solid{color:#fff;background:var(--blue);border-color:rgba(122,152,255,.7);box-shadow:0 12px 26px rgba(0,0,108,.24)}
+.btn--solid .arw{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3)}
+
+/* sections */
+.sec{padding:var(--sy) var(--page-x)}
+.sec--tint{background-color:var(--gray-bg);background-image:radial-gradient(rgba(0,0,110,.05) 1px,transparent 1px);background-size:20px 20px}
+.sec--blue{background:var(--blue);color:#fff}
+.bridge{display:flex;justify-content:center;padding:24px var(--page-x) 0}
+.bridge:has(+ .sec--tint){background-color:var(--gray-bg);background-image:radial-gradient(rgba(0,0,110,.05) 1px,transparent 1px);background-size:20px 20px}
+.bridge span{position:relative;background:var(--blue);color:#fff;font-size:13px;font-weight:800;padding:10px 20px;border-radius:999px}
+.bridge span::after{content:"";position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);border:9px solid transparent;border-top-color:var(--blue);border-bottom:0}
+
+.sh{text-align:center;margin-bottom:24px}
+.sh .eb{display:block;font-family:var(--fe);font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--blue);margin-bottom:11px}
+.sec--blue .sh .eb{color:var(--blue-ll)}
+.sh h2{font-size:clamp(23px,6.4vw,28px);font-weight:900;line-height:1.45;letter-spacing:-.02em}
+.sh .mk{background:linear-gradient(transparent 70%,rgba(0,0,212,.18) 70%)}
+.sec--blue .sh .mk{background:linear-gradient(transparent 70%,rgba(122,152,255,.42) 70%)}
+.sh p{margin-top:12px;font-size:13px;line-height:1.95;color:var(--sub)}
+.sec--blue .sh p{color:rgba(255,255,255,.8)}
+.closing .sh h2{color:#fff}
+.closing .sh .eb{color:var(--blue-ll)}
+.closing .sh p{color:rgba(255,255,255,.86)}
+.closing .sh .mk{background:linear-gradient(transparent 70%,rgba(122,152,255,.45) 70%)}
+.note{margin-top:16px;font-size:10.5px;line-height:1.75;color:var(--mute)}
+.sec--blue .note{color:rgba(255,255,255,.55)}
+
+/* card grids */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.tile{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:15px 10px;text-align:center}
+.tile i{display:grid;place-items:center;width:30px;height:30px;margin:0 auto 9px;border-radius:3px;background:var(--tint);color:var(--blue);font-family:var(--fe);font-style:normal;font-size:12px;font-weight:700}
+.tile strong{display:block;font-size:14px;font-weight:900;line-height:1.5}
+.tile span{display:block;margin-top:5px;font-size:11px;line-height:1.6;letter-spacing:-.01em;color:var(--sub);white-space:nowrap}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.chips span{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:9px 13px;font-size:12.5px;font-weight:700}
+.sec--tint .chips span{background:var(--white)}
+
+/* numbered list */
+.nlist{border-top:1px solid var(--border)}
+.nrow{display:grid;grid-template-columns:38px 1fr;gap:0 12px;padding:16px 0;border-bottom:1px solid var(--border)}
+.nrow b{font-family:var(--fe);font-size:13px;font-weight:700;color:var(--blue);padding-top:2px}
+.nrow strong{display:block;font-size:15px;font-weight:900;line-height:1.55}
+.nrow span{display:block;margin-top:3px;font-size:12.5px;line-height:1.8;color:var(--sub)}
+
+.tbd{border-bottom:1px dotted #C9C5C0}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.2)}
+.num{background:var(--blue);padding:20px 12px;text-align:center}
+.num b{display:block;font-size:10.5px;font-weight:700;color:rgba(255,255,255,.68);margin-bottom:6px}
+.num strong{font-family:var(--fe);font-size:28px;font-weight:700;line-height:1.1}
+.num strong i{font-style:normal;font-family:var(--fj);font-size:12px;font-weight:700;margin-left:3px}
+
+/* steps */
+.steps{position:relative;padding-left:28px}
+.steps::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:2px;background:var(--tint)}
+.step{position:relative;padding-bottom:18px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:-28px;top:5px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.step b{display:block;font-family:var(--fe);font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--blue)}
+.step strong{display:block;font-size:15px;font-weight:900;line-height:1.5}
+.step span{display:block;margin-top:2px;font-size:12.5px;line-height:1.8;color:var(--sub)}
+
+/* agent card */
+.ag{background:var(--white);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.ag-top{display:flex;align-items:center;gap:14px;padding:18px 16px;background:var(--gray-bg);border-bottom:1px solid var(--border)}
+.ag-top img{width:64px;height:64px;border-radius:50%;object-fit:cover;background:#fff;border:1px solid var(--border);flex:none}
+.ag-top b{display:block;font-size:10.5px;font-weight:700;color:var(--mute);line-height:1.6}
+.ag-top strong{display:block;font-size:19px;font-weight:900;line-height:1.4}
+.ag-body{padding:18px 16px}
+.ag-body p{font-size:12.5px;line-height:1.95;color:var(--sub)}
+.ag-prof{margin-top:14px;border-top:1px solid var(--border)}
+.ag-prof div{display:grid;grid-template-columns:82px 1fr;gap:0 10px;padding:11px 0;border-bottom:1px solid var(--border)}
+.ag-prof dt{font-size:11.5px;font-weight:800}
+.ag-prof dd{font-size:12.5px;color:var(--sub)}
+
+/* safety */
+.safe{display:flex;flex-direction:column;gap:9px}
+.safe div{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:6px;padding:14px 16px}
+.safe strong{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:900;line-height:1.5}
+.safe strong::before{content:"✓";flex:none;display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:var(--blue);color:#fff;font-size:11px}
+.safe p{margin-top:5px;padding-left:27px;font-size:12px;line-height:1.8;color:var(--sub)}
+
+/* faq */
+.faq details{background:var(--white);border:1px solid var(--border);border-radius:6px;margin-bottom:8px;overflow:hidden}
+.faq details[open]{border-color:var(--blue)}
+.faq summary{display:flex;align-items:center;gap:11px;padding:15px 14px;cursor:pointer;list-style:none;font-size:13.5px;font-weight:800;line-height:1.6}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:4px;background:var(--blue);color:#fff;font-family:var(--fe);font-style:normal;font-size:12px}
+.faq summary b{margin-left:auto;flex:none;font-weight:400;font-size:16px;color:var(--blue);transition:transform .2s}
+.faq details[open] summary b{transform:rotate(45deg)}
+.faq-a{display:flex;gap:11px;padding:0 14px 15px}
+.faq-a i{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:4px;background:var(--tint);color:var(--blue);font-family:var(--fe);font-style:normal;font-size:12px}
+.faq-a p{font-size:12.5px;line-height:1.9;color:var(--sub)}
+
+/* closing */
+.closing{position:relative;isolation:isolate;overflow:hidden;background:var(--blue);color:#fff;padding:var(--sy) var(--page-x);text-align:center}
+.closing::before{content:"";position:absolute;inset:-38px;z-index:0;opacity:.7;
+  background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
+  background-size:36px 36px,36px 36px;animation:grid 26s linear infinite}
+.closing>*{position:relative;z-index:1}
+.cl-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:12px}
+.cl-chips span{font-size:11px;font-weight:700;color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.32);border-radius:3px;padding:6px 11px}
+
+/* footer */
+.foot{background:#141414;color:rgba(255,255,255,.6);padding:30px var(--page-x) 26px;text-align:center;font-size:11.5px}
+.foot-logo{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px}
+.foot-logo span{font-family:var(--fe);font-size:14px;font-weight:700;letter-spacing:.13em;color:#fff}
+.foot dl{display:grid;grid-template-columns:auto 1fr;gap:5px 12px;text-align:left;line-height:1.8;margin-bottom:16px}
+.foot dt{font-weight:700;color:rgba(255,255,255,.85);white-space:nowrap}
+.foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;margin-bottom:12px}
+.foot-links a{color:rgba(255,255,255,.8)}
+.foot .cr{margin-top:12px;font-family:var(--fe);font-size:10px;color:rgba(255,255,255,.4)}
+
+.fx{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:80;width:min(var(--lp-w),100%);
+  display:flex;align-items:center;gap:10px;padding:9px var(--page-x) calc(11px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.97);border-top:1px solid var(--border)}
+.fx em{flex:none;font-style:normal;font-size:10.5px;font-weight:800;color:var(--blue);line-height:1.4}
+.fx .btn{padding:13px 12px;font-size:14px;box-shadow:none}
+@media (min-width:1120px){.fx{display:none}}
+
+.fu{opacity:0;transform:translateY(16px)}
+.js .fu{transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.js .fu.in,html:not(.js) .fu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .fu{opacity:1;transform:none;transition:none}.hero::before,.closing::before{animation:none}}
+
+
+
+.hero-hh{margin-top:16px}
+
+
+
+
+
+/* ============ NETWORK ============ */
+
+
+.ncomp{display:flex;flex-wrap:wrap;justify-content:center;gap:7px}
+.ncomp span{display:inline-flex;align-items:center;gap:7px;border-radius:99px;padding:9px 14px 9px 11px;
+  font-size:11.5px;font-weight:800;letter-spacing:-.02em;
+  background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.28);
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .25s}
+.ncomp span::before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:var(--blue-ll);
+  box-shadow:0 0 6px rgba(150,180,255,.9)}
+.ncomp span:hover{transform:translateY(-3px);background:rgba(255,255,255,.2)}
+.ncomp-n{margin-top:14px;text-align:center;font-size:11.5px;line-height:1.8;color:rgba(255,255,255,.8)}
+.ncomp-n b{color:#fff;background:linear-gradient(transparent 64%,rgba(122,152,255,.55) 64%)}
+
+
+.nadv{position:relative;margin-top:26px;border-radius:12px;padding:18px 16px 18px;text-align:center;
+  background:linear-gradient(150deg,rgba(255,255,255,.17),rgba(255,255,255,.07));
+  border:1px solid rgba(255,255,255,.34);box-shadow:0 14px 30px rgba(0,0,60,.22)}
+.nadv-l{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--blue-d);
+  background:#fff;border-radius:99px;padding:4px 14px;margin-bottom:14px}
+.nadv-row{display:flex;align-items:stretch;justify-content:center;gap:10px}
+.nadv-c{flex:1;max-width:132px;display:flex;flex-direction:column;justify-content:center;
+  border-radius:9px;padding:13px 6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.34)}
+.nadv-c span{display:block;font-family:var(--fe);font-size:8.5px;font-weight:700;letter-spacing:.16em;
+  color:var(--blue-ll);margin-bottom:6px}
+.nadv-c b{font-size:12.5px;font-weight:900;line-height:1.5;letter-spacing:-.02em}
+.nadv-c--a{background:#fff;border-color:#fff}
+.nadv-c--a span{color:var(--blue)}
+.nadv-c--a b{color:var(--blue-d)}
+.nadv-row i{align-self:center;font-style:normal;font-size:17px;font-weight:700;flex:none}
+.nadv p{margin-top:14px;font-size:11.5px;line-height:1.85;color:rgba(255,255,255,.84)}
+.nadv p b{color:#fff;background:linear-gradient(transparent 64%,rgba(122,152,255,.55) 64%)}
+
+/* ---- NETWORK 背景演出 ---- */
+@keyframes netDash{to{stroke-dashoffset:-260}}
+@keyframes netPulse{0%,100%{opacity:.25;transform:scale(1)}50%{opacity:.55;transform:scale(1.1)}}
+.net-fx{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.net-fx i{position:absolute;display:block;will-change:transform}
+.net-fx .no1,.net-fx .no2,.net-fx .no3{border-radius:50%;filter:blur(48px)}
+.net-fx .no1{width:340px;height:340px;left:-120px;top:4%;background:radial-gradient(circle,rgba(160,190,255,.32),transparent 68%);animation:drift1 30s ease-in-out infinite}
+.net-fx .no2{width:400px;height:400px;right:-150px;bottom:6%;background:radial-gradient(circle,rgba(255,255,255,.20),transparent 68%);animation:drift2 38s ease-in-out infinite}
+.net-fx .no3{width:220px;height:220px;right:18%;top:34%;background:radial-gradient(circle,rgba(122,152,255,.34),transparent 70%);animation:drift1 24s ease-in-out infinite reverse}
+.net-fx .nb1,.net-fx .nb2,.net-fx .nb3{height:1px;background:linear-gradient(90deg,transparent,rgba(214,224,255,.85),transparent);box-shadow:0 0 12px rgba(150,180,255,.5)}
+.net-fx .nb1{width:520px;left:-160px;top:14%;animation:beam 10s ease-in-out infinite}
+.net-fx .nb2{width:420px;right:-140px;top:52%;animation:beam 13s ease-in-out 3s infinite}
+.net-fx .nb3{width:360px;left:-120px;bottom:12%;animation:beam 16s ease-in-out 6s infinite}
+.net-fx .nr1,.net-fx .nr2{border-radius:50%;border:1px solid rgba(190,208,255,.20)}
+.net-fx .nr1{width:300px;height:300px;left:-90px;bottom:-60px;animation:spinSlow 80s linear infinite}
+.net-fx .nr2{width:180px;height:180px;right:-40px;top:8%;border-style:dashed;animation:spinSlow 56s linear infinite reverse}
+.net-fx .nq1{width:150px;height:150px;left:16%;bottom:20%;border:1px solid rgba(190,208,255,.18);animation:drift3 34s ease-in-out infinite}
+.net-fx .np{width:4px;height:4px;border-radius:50%;background:rgba(214,224,255,.95);box-shadow:0 0 8px rgba(150,180,255,.9)}
+.net-fx .np1{left:10%;bottom:2%;animation:floatUp 13s linear infinite}
+.net-fx .np2{left:32%;bottom:6%;animation:floatUp 16s linear 2.5s infinite}
+.net-fx .np3{left:54%;bottom:1%;animation:floatUp 14s linear 5s infinite}
+.net-fx .np4{left:74%;bottom:8%;animation:floatUp 18s linear 1.5s infinite}
+.net-fx .np5{left:88%;bottom:3%;animation:floatUp 15s linear 7s infinite}
+.net-fx .np6{left:20%;bottom:12%;animation:floatUp 17s linear 9s infinite}
+.nlink{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.nlink polyline{fill:none;stroke:rgba(200,214,255,.6);stroke-width:1;stroke-dasharray:8 10;animation:netDash 12s linear infinite}
+.nlink circle{fill:rgba(214,224,255,.9);animation:netPulse 4s ease-in-out infinite}
+.nlink circle:nth-child(odd){animation-delay:1.4s}
+@media (prefers-reduced-motion:reduce){
+  .net-fx i,.nlink polyline,.nlink circle{animation:none!important}
+}
+
+.nmain{position:relative;overflow:hidden;text-align:center;border-radius:10px;padding:16px 16px 14px;
+  background:linear-gradient(150deg,rgba(255,255,255,.16),rgba(255,255,255,.06));
+  border:1px solid rgba(255,255,255,.34);box-shadow:0 14px 30px rgba(0,0,60,.22)}
+.nmain::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.6;
+  background-image:repeating-linear-gradient(116deg,transparent 0 30px,rgba(255,255,255,.06) 30px 31.5px)}
+.nmain>*{position:relative}
+.nmain-l{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;
+  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:3px;padding:4px 11px}
+.nmain-v{display:flex;align-items:baseline;justify-content:center;gap:5px;margin:7px 0 4px}
+.nmain-v b{font-family:var(--fe);font-size:clamp(38px,10.5vw,48px);font-weight:700;line-height:1;letter-spacing:-.02em}
+.nmain-v i{font-style:normal;font-size:15px;font-weight:800}
+.nmain-s{font-size:10.5px;color:rgba(255,255,255,.7)}
+.nsub{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.nsub div{text-align:center;border-radius:8px;padding:14px 6px;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.26)}
+.nsub span{display:block;font-size:10px;color:rgba(255,255,255,.72);margin-bottom:6px;letter-spacing:-.02em}
+.nsub b{font-family:var(--fe);font-size:24px;font-weight:700;line-height:1}
+.nsub i{font-style:normal;font-size:11px;font-weight:700;margin-left:2px}
+.nind-t{display:flex;align-items:center;justify-content:center;gap:10px;margin:30px 0 14px;
+  font-size:13px;font-weight:800;letter-spacing:.04em}
+.nind-t::before,.nind-t::after{content:"";width:16px;height:2px;background:var(--blue-ll)}
+.nind{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.ni{display:flex;align-items:center;gap:10px;border-radius:8px;padding:12px 12px;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.24);
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .25s}
+.ni:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+.ni svg{flex:none;width:22px;height:22px;color:var(--blue-ll)}
+.ni span{font-size:12px;font-weight:800;letter-spacing:-.02em}
+.sec--blue .tbd{border-bottom-color:rgba(255,255,255,.45)}
+
+
+.jslide{margin:14px calc(var(--page-x)*-1) 0;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.jslide-track{display:flex;align-items:stretch;width:max-content;animation:jslide 62s linear infinite}
+@keyframes jslide{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.jc{flex:0 0 344px;margin-right:9px;background:var(--white);border-radius:8px;
+  padding:12px 14px 11px;box-shadow:0 10px 22px rgba(0,0,60,.22)}
+.jc-h{display:flex;align-items:center;gap:9px;min-width:0}
+.jc-tag{flex:none;font-size:9.5px;font-weight:800;letter-spacing:-.01em;color:var(--blue-d);
+  background:var(--tint);border-radius:3px;padding:4px 8px}
+.jc-h strong{flex:1;min-width:0;font-size:13.5px;font-weight:900;color:var(--text);letter-spacing:-.02em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jc-no{flex:none;font-family:var(--fe);font-size:9px;font-weight:600;color:#B5AFAA}
+.jc-b{display:flex;align-items:center;gap:14px;margin-top:8px;padding-bottom:9px;border-bottom:1px dashed var(--border)}
+.jc-sal{flex:none;display:flex;align-items:baseline;gap:3px}
+.jc-sal i{font-style:normal;font-size:9.5px;font-weight:800;color:var(--sub)}
+.jc-sal b{font-family:var(--fe);font-size:19px;font-weight:700;line-height:1.1;color:var(--blue)}
+.jc-sal em{font-style:normal;font-size:10.5px;font-weight:800;color:var(--blue)}
+.jc-m{display:flex;gap:10px;min-width:0}
+.jc-m div{display:flex;align-items:center;gap:5px;min-width:0}
+.jc-m dt{flex:none;font-size:8.5px;font-weight:700;color:#fff;background:#B5AFAA;border-radius:2px;padding:2px 4px}
+.jc-m dd{font-size:10.5px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jc-f{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px;min-width:0}
+.jc-tags{display:flex;gap:4px;flex:none}
+.jc-tags span{font-size:9px;font-weight:700;color:var(--blue-d);border:1px solid rgba(0,0,212,.24);
+  border-radius:99px;padding:3px 7px;white-space:nowrap}
+.jc-co{font-size:10px;font-weight:700;color:var(--sub);letter-spacing:-.03em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:right}
+.jslide-n{margin-top:12px;text-align:center;font-size:10px;color:rgba(255,255,255,.6)}
+@media (prefers-reduced-motion:reduce){.jslide-track{animation:none}.jslide{overflow-x:auto}}
+
+
+.nsal{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding-top:16px}
+.nsal-scale{position:absolute;left:2px;right:2px;top:0;height:6px;border-radius:99px;
+  background:linear-gradient(90deg,rgba(255,255,255,.28),rgba(255,255,255,.62) 55%,#fff);
+  display:flex;align-items:center;justify-content:space-between;padding:0 3px}
+.nsal-scale i{width:4px;height:4px;border-radius:50%;background:var(--blue)}
+.nsal span{text-align:center;border-radius:6px;padding:11px 2px;font-size:11.5px;font-weight:800;letter-spacing:-.03em;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.26);
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .25s}
+.nsal span:hover{transform:translateY(-3px);background:rgba(255,255,255,.2)}
+.nsal span:nth-child(n+7){background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.42)}
+.nsal-n{margin-top:14px;text-align:center;font-size:11.5px;line-height:1.85;color:rgba(255,255,255,.8)}
+.nsal-n b{color:#fff;background:linear-gradient(transparent 64%,rgba(122,152,255,.55) 64%)}
+
+/* ============ PROBLEM ============ */
+.wl{position:relative}
+.wb{position:relative;border:2px solid var(--blue);border-radius:4px;background:transparent;
+  padding:30px 12px 24px;margin-bottom:30px;text-align:center}
+.wb:last-child{margin-bottom:0}
+.wb b{position:absolute;left:12px;top:-13px;background:var(--blue);color:#fff;
+  font-size:11px;font-weight:800;letter-spacing:.02em;padding:5px 12px;border-radius:3px}
+.wb p{font-size:15.5px;font-weight:600;line-height:2;color:var(--text);letter-spacing:-.01em}
+.wb em{font-style:normal;font-weight:900;background:linear-gradient(transparent 64%,rgba(0,0,212,.20) 64%)}
+.wb::after{content:"";position:absolute;left:46px;bottom:-12px;width:20px;height:20px;
+  background:var(--gray-bg);border-left:2px solid var(--blue);border-bottom:2px solid var(--blue);
+  transform:rotate(-45deg)}
+.wb--r::after{left:auto;right:46px}
+.wb:last-child::after{display:none}
+.wsum{position:relative;isolation:isolate;overflow:hidden;margin-top:36px;padding:30px 18px;
+  background:var(--blue);color:#fff;border-radius:4px;text-align:center}
+.wsum::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:repeating-linear-gradient(120deg,transparent 0 26px,rgba(255,255,255,.07) 26px 40px)}
+.wsum>*{position:relative;z-index:1}
+.wsum span{display:block;font-size:13.5px;font-weight:700;color:rgba(255,255,255,.86);margin-bottom:12px}
+.wsum strong{display:block;font-size:clamp(19px,5vw,22px);font-weight:900;line-height:1.65}
+.wsum i{display:inline-block;font-style:normal;font-family:var(--fe);font-size:clamp(18px,4.8vw,21px);
+  background:#fff;color:var(--blue);padding:3px 12px;margin-right:5px;letter-spacing:.01em}
+.wsum .u{margin-top:4px;text-decoration:underline;text-underline-offset:7px;
+  text-decoration-thickness:2px;text-decoration-color:rgba(255,255,255,.55)}
+
+/* ============ INTRO（完全紹介制） ============ */
+.intro{position:relative;overflow:hidden;background:var(--white);padding-inline:calc(var(--page-x) + 14px);padding-block:calc(var(--sy) - 10px) var(--sy);
+  background-image:linear-gradient(rgba(0,0,212,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,212,.035) 1px,transparent 1px);
+  background-size:30px 30px;text-align:center}
+.intro-ghost{position:absolute;left:50%;top:2px;transform:translateX(-50%);z-index:0;pointer-events:none;
+  white-space:nowrap;font-family:var(--fe);font-size:56px;font-weight:700;letter-spacing:.04em;
+  color:transparent;-webkit-text-stroke:1.5px rgba(0,0,212,.10)}
+.intro-in{position:relative;z-index:1;padding-top:30px;padding-bottom:4px}
+.intro-rule{display:block;width:110px;height:3px;background:var(--blue);margin:0 auto 22px}
+.intro h2{font-size:clamp(25px,6.8vw,31px);font-weight:900;line-height:1.6;letter-spacing:-.02em;margin-bottom:30px}
+.intro h2 .hl{display:inline-block;background:var(--blue);color:#fff;padding:3px 12px;
+  box-shadow:7px 7px 0 rgba(0,0,212,.16)}
+.intro p{font-size:15.5px;font-weight:700;line-height:2.05;color:var(--text);margin-bottom:26px;letter-spacing:-.01em;word-break:auto-phrase}
+.intro p b{color:var(--blue)}
+
+.ic-row{display:flex;align-items:stretch;justify-content:center;gap:16px;margin-top:40px}
+.ic{position:relative;flex:1;max-width:156px;display:flex;flex-direction:column;justify-content:center;
+  background:var(--white);border:2px solid var(--blue);border-radius:12px;padding:17px 8px;
+  box-shadow:7px 7px 0 rgba(0,0,212,.13)}
+.ic span{display:block;font-family:var(--fe);font-size:9.5px;font-weight:700;letter-spacing:.12em;color:var(--blue);margin-bottom:9px}
+.ic strong{display:block;font-size:14.5px;font-weight:900;line-height:1.5;color:var(--blue-d);letter-spacing:-.03em;white-space:nowrap}
+.ic--b{background:linear-gradient(150deg,var(--blue),#1B2CF0);border-color:var(--blue)}
+.ic--b span{color:rgba(255,255,255,.82)}
+.ic--b strong{color:#fff}
+.ic-row i{align-self:center;font-style:normal;font-size:20px;font-weight:700;color:var(--blue);flex:none}
+
+/* ============ メディア掲載 ============ */
+.media{padding:30px var(--page-x) 30px;background:var(--white);border-bottom:1px solid var(--border)}
+.media-t{display:flex;align-items:center;justify-content:center;gap:10px;
+  text-align:center;font-size:13px;font-weight:800;line-height:1.85;margin-bottom:16px}
+.media-t::before,.media-t::after{content:"";flex:none;width:16px;height:2px;background:var(--blue)}
+.media-t b{color:var(--blue-d);background:linear-gradient(transparent 66%,rgba(0,0,212,.20) 66%)}
+.media-wrap{overflow:hidden;margin-inline:calc(var(--page-x)*-1);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.media-track{display:flex;width:max-content;animation:mediaSlide 28s linear infinite}
+.media-track img{height:52px;width:auto;max-width:none}
+@keyframes mediaSlide{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.media-wrap:hover .media-track{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.media-track{animation:none}}
+
+/* ============ ABOUT ============ */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:9px;position:relative;margin-bottom:34px}
+.vs-c{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:16px 12px}
+.vs-c--hh{background:linear-gradient(150deg,#F7F8FF,#EBEEFF);border-color:rgba(0,0,212,.26);box-shadow:0 10px 24px rgba(0,0,120,.09)}
+.vs-t{display:block;text-align:center;font-size:10.5px;font-weight:800;color:var(--mute);padding-bottom:10px;margin-bottom:11px;border-bottom:1px solid var(--border)}
+.vs-c--hh .vs-t{font-family:var(--fe);font-size:11px;letter-spacing:.06em;color:var(--blue);border-bottom-color:rgba(0,0,212,.2)}
+.vs-c ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.vs-c li{position:relative;padding-left:14px;font-size:11.5px;line-height:1.6;color:var(--sub);letter-spacing:-.02em}
+.vs-c li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:1px;background:#C9C5C0}
+.vs-c--hh li{color:var(--text);font-weight:800}
+.vs-c--hh li::before{content:"✓";top:0;width:auto;height:auto;background:none;font-size:9px;color:var(--blue)}
+.vs-x{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;display:grid;place-items:center;
+  width:36px;height:36px;border-radius:50%;background:var(--blue);color:#fff;border:3px solid var(--white);
+  font-family:var(--fe);font-size:11px;font-weight:700;box-shadow:0 6px 16px rgba(0,0,120,.28)}
+.ab-lead{text-align:center;font-size:15px;font-weight:900;margin-bottom:18px;letter-spacing:-.02em}
+
+.ab{display:flex;flex-direction:column;gap:10px}
+.ab-c{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:auto 1fr;
+  gap:0 15px;align-items:center;background:var(--white);border:1px solid var(--border);border-radius:10px;
+  padding:17px 18px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,border-color .3s}
+.ab-c::before{content:"";position:absolute;right:-40px;top:-40px;z-index:0;width:130px;height:130px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,0,212,.10),transparent 70%);transition:transform .55s}
+.ab-c::after{content:"";position:absolute;left:0;top:0;z-index:1;width:3px;height:100%;
+  background:linear-gradient(180deg,var(--blue),var(--blue-ll));transform:scaleY(0);transform-origin:top;
+  transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.ab-c.in::after{transform:scaleY(1)}
+.ab-c:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,0,80,.13);border-color:rgba(0,0,212,.3)}
+.ab-c:hover::before{transform:scale(1.4)}
+.ab-c>*{position:relative;z-index:2}
+.ab-n{font-family:var(--fe);font-size:38px;font-weight:700;line-height:1;letter-spacing:-.04em;
+  color:transparent;-webkit-text-stroke:1.6px rgba(0,0,212,.32)}
+.ab-t{min-width:0}
+.ab-e{display:block;font-family:var(--fe);font-size:9px;font-weight:700;letter-spacing:.18em;color:var(--blue);margin-bottom:4px}
+.ab-t strong{display:block;font-size:16px;font-weight:900;line-height:1.4;letter-spacing:-.02em}
+.ab-d{display:block;margin-top:3px;font-size:11px;line-height:1.6;color:var(--sub)}
+.ab-q{grid-column:1/-1;margin-top:13px;padding:10px 13px;border-radius:7px;background:var(--gray-bg);
+  border-left:2px solid var(--blue-ll);font-size:11.5px;font-weight:700;line-height:1.7;color:var(--sub)}
+.ab-q::before{content:"“";margin-right:2px;color:var(--blue-ll);font-weight:900}
+.ab-q::after{content:"”";margin-left:2px;color:var(--blue-ll);font-weight:900}
+.ab-flow{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:26px}
+.ab-flow span{position:relative;flex:1;max-width:106px;text-align:center;
+  font-size:13px;font-weight:900;letter-spacing:-.02em;color:var(--blue-d);
+  background:linear-gradient(150deg,var(--tint),#F5F6FF);border:1px solid rgba(0,0,212,.20);
+  border-radius:9px;padding:13px 4px;box-shadow:0 6px 14px rgba(0,0,120,.07);
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.ab-flow span:hover{transform:translateY(-3px)}
+.ab-flow span::before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;
+  border-radius:9px 9px 0 0;background:linear-gradient(90deg,var(--blue),var(--blue-ll))}
+.ab-flow i{flex:none;font-style:normal;font-family:var(--fe);font-size:15px;font-weight:700;color:var(--blue-ll)}
+.ab-sum{position:relative;margin-top:22px;padding:24px 18px;text-align:center;border-radius:10px;
+  background:linear-gradient(135deg,var(--tint),#F6F5FF);border:1px solid rgba(0,0,212,.16);
+  font-size:14.5px;font-weight:800;line-height:1.9}
+.ab-sum b{background:linear-gradient(transparent 66%,rgba(0,0,212,.22) 66%)}
+
+/* ============ 在籍ヘッドハンター ============ */
+.hh-row{overflow:hidden;margin-inline:calc(var(--page-x)*-1);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.hh-row+.hh-row{margin-top:10px}
+.hh-track{display:flex;width:max-content;animation:marquee 46s linear infinite}
+.hh-row--rev .hh-track{animation-direction:reverse;animation-duration:54s}
+@keyframes marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.hh{position:relative;flex:0 0 246px;margin-right:8px;height:126px;border-radius:7px;overflow:hidden;display:flex;align-items:flex-end;
+  background:linear-gradient(132deg,#FFFFFF 0%,#F6F7FF 58%,#E9EDFF 100%);
+  border:1px solid rgba(255,255,255,.9);box-shadow:0 14px 30px rgba(0,0,64,.30)}
+.hh::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    repeating-linear-gradient(114deg,transparent 0 38px,rgba(0,0,212,.075) 38px 39.2px,transparent 39.2px 76px),
+    linear-gradient(rgba(0,0,212,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,212,.04) 1px,transparent 1px);
+  background-size:100% 100%,22px 22px,22px 22px}
+.hh img{position:relative;z-index:1;flex:none;align-self:stretch;width:104px;height:100%;object-fit:cover;object-position:top center}
+.hh-txt{position:relative;z-index:2;flex:1;min-width:0;padding:0 12px 16px 9px}
+.hh-txt strong{display:block;font-size:12px;font-weight:900;line-height:1.55;color:var(--text);letter-spacing:-.01em}
+.hh-role{display:block;margin-top:5px;font-size:9.5px;line-height:1.45;color:var(--sub)}
+.hh-badge{display:inline-flex;align-items:center;gap:6px;margin-bottom:7px;
+  font-size:8px;font-weight:700;letter-spacing:.1em;color:var(--blue);white-space:nowrap}
+.hh-badge::before{content:"";flex:none;width:16px;height:2px;background:var(--blue)}
+.hh-cap{margin-top:14px;text-align:center;font-size:10px;line-height:1.7;color:rgba(255,255,255,.55)}
+@media (prefers-reduced-motion:reduce){.hh-track{animation:none}.hh-row{overflow-x:auto}}
+
+/* ============ リッチ背景・アニメーション ============ */
+@keyframes drift1{0%,100%{transform:translate3d(0,0,0) scale(1)}33%{transform:translate3d(60px,-40px,0) scale(1.12)}66%{transform:translate3d(-30px,50px,0) scale(.94)}}
+@keyframes drift2{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-70px,40px,0) scale(1.18)}}
+@keyframes drift3{0%,100%{transform:translate3d(0,0,0) rotate(0deg)}50%{transform:translate3d(40px,-60px,0) rotate(180deg)}}
+@keyframes panGrid{from{background-position:0 0}to{background-position:64px 64px}}
+@keyframes sheen{0%{transform:translateX(-120%) rotate(18deg)}55%,100%{transform:translateX(560%) rotate(18deg)}}
+@keyframes floatUp{0%{transform:translate3d(0,20px,0);opacity:0}18%{opacity:.75}82%{opacity:.55}100%{transform:translate3d(14px,-150px,0);opacity:0}}
+@keyframes beam{0%,100%{transform:translate3d(-40%,0,0) rotate(-11deg);opacity:0}30%{opacity:.9}70%{opacity:.35}}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+@keyframes pulseGlow{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.7;transform:scale(1.15)}}
+
+/* PCステージ */
+@media (min-width:1120px){
+  .stage{overflow:hidden;background:linear-gradient(160deg,#F4F2FF 0%,#F7F5F2 46%,#EEF0FF 100%)}
+  .stage::before{animation:panGrid 22s linear infinite}
+  .stage .orb{position:absolute;border-radius:50%;filter:blur(46px);will-change:transform}
+  .stage .o1{width:520px;height:520px;left:-140px;top:-120px;background:radial-gradient(circle,rgba(0,0,212,.16),transparent 68%);animation:drift1 34s ease-in-out infinite}
+  .stage .o2{width:620px;height:620px;right:-180px;bottom:-200px;background:radial-gradient(circle,rgba(122,152,255,.22),transparent 68%);animation:drift2 42s ease-in-out infinite}
+  .stage .o3{width:300px;height:300px;right:14%;top:6%;background:radial-gradient(circle,rgba(0,51,255,.14),transparent 70%);animation:drift1 28s ease-in-out infinite reverse}
+  .stage .ring{position:absolute;border-radius:50%;border:1px solid rgba(0,0,212,.10);will-change:transform}
+  .stage .r1{width:440px;height:440px;left:6%;bottom:8%;animation:spinSlow 90s linear infinite}
+  .stage .r2{width:260px;height:260px;right:9%;top:16%;border-style:dashed;animation:spinSlow 64s linear infinite reverse}
+  .stage .sq{position:absolute;border:1px solid rgba(0,0,212,.12);will-change:transform}
+  .stage .s1{width:120px;height:120px;left:16%;top:14%;animation:drift3 38s ease-in-out infinite}
+  .stage .s2{width:76px;height:76px;right:20%;bottom:18%;animation:drift3 30s ease-in-out infinite reverse}
+}
+
+/* ヒーロー：光線・粒子 */
+.hero-fx{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.hero-fx i{position:absolute;display:block;will-change:transform}
+.hero-fx .b1{width:560px;height:1px;left:-180px;top:18%;background:linear-gradient(90deg,transparent,rgba(203,214,255,.85),transparent);box-shadow:0 0 14px rgba(122,152,255,.5);animation:beam 9s ease-in-out infinite}
+.hero-fx .b2{width:440px;height:1px;right:-150px;top:62%;background:linear-gradient(90deg,transparent,rgba(203,214,255,.6),transparent);animation:beam 12s ease-in-out 2.4s infinite}
+.hero-fx .g1{width:250px;height:520px;right:-110px;top:-80px;border:1px solid rgba(190,204,255,.18);background:linear-gradient(160deg,rgba(255,255,255,.06),transparent 46%);transform:rotate(18deg);animation:drift2 26s ease-in-out infinite}
+.hero-fx .g2s{width:170px;height:170px;left:-70px;bottom:8%;border:1px solid rgba(190,204,255,.2);transform:rotate(45deg);animation:spinSlow 70s linear infinite}
+.hero-fx .p{width:5px;height:5px;border-radius:50%;background:rgba(203,214,255,.9);box-shadow:0 0 8px rgba(122,152,255,.8)}
+.hero-fx .p1{left:12%;bottom:8%;animation:floatUp 11s linear infinite}
+.hero-fx .p2{left:38%;bottom:4%;animation:floatUp 14s linear 2s infinite}
+.hero-fx .p3{left:64%;bottom:12%;animation:floatUp 12s linear 4.5s infinite}
+.hero-fx .p4{left:84%;bottom:6%;animation:floatUp 16s linear 1.2s infinite}
+.hero-fx .p5{left:26%;bottom:16%;animation:floatUp 13s linear 6s infinite}
+
+/* CTAの光沢 */
+.btn{isolation:isolate}
+.btn .sheen{position:absolute;z-index:0;top:-90%;left:0;width:16%;height:280%;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(122,152,255,.35),transparent);animation:sheen 4.6s ease-in-out infinite}
+.btn--solid .sheen{background:linear-gradient(90deg,transparent,rgba(255,255,255,.30),transparent)}
+.btn>*{position:relative;z-index:1}
+.btn::before{position:relative;z-index:1}
+.btn{transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(0,0,64,.30)}
+
+/* セクションの環境光 */
+.sec--tint{position:relative;overflow:hidden}
+.sec--tint::after{content:"";position:absolute;z-index:0;width:420px;height:420px;right:-160px;top:-140px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,0,212,.07),transparent 68%);filter:blur(30px);animation:pulseGlow 14s ease-in-out infinite;pointer-events:none}
+.sec--tint>*{position:relative;z-index:1}
+.sec--blue{position:relative;overflow:hidden}
+.sec--blue::before{content:"";position:absolute;inset:-38px;z-index:0;opacity:.6;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:36px 36px,36px 36px;animation:grid 26s linear infinite}
+.sec--blue>*{position:relative;z-index:1}
+
+/* マーカーの伸び */
+.sh .mk{background-repeat:no-repeat;background-size:0% 100%}
+.js .sh.in .mk{background-size:100% 100%;transition:background-size .9s .3s cubic-bezier(.16,1,.3,1)}
+html:not(.js) .sh .mk{background-size:100% 100%}
+
+/* 段階的な出現 */
+.js .fu{transition-delay:calc(var(--i,0)*70ms)}
+
+/* ステップの線が伸びる */
+.steps::before{transform-origin:top;transform:scaleY(0);transition:transform 1.1s cubic-bezier(.16,1,.3,1)}
+.steps.lit::before{transform:scaleY(1)}
+html:not(.js) .steps::before{transform:scaleY(1)}
+.step::before{transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.js .step.in::before{animation:none}
+.step.in::before{box-shadow:0 0 0 5px rgba(0,0,212,.10)}
+
+/* ホバーの手応え */
+.tile,.chips span,.safe div,.faq details{transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,border-color .25s}
+.tile:hover,.safe div:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,80,.10);border-color:rgba(0,0,212,.3)}
+.chips span:hover{transform:translateY(-2px);border-color:var(--blue);color:var(--blue)}
+.faq details:hover{box-shadow:0 8px 20px rgba(0,0,80,.07)}
+.nrow{transition:background .25s}
+.nrow:hover{background:rgba(0,0,212,.03)}
+.num{transition:transform .3s}
+.num:hover{transform:translateY(-2px)}
+
+@media (prefers-reduced-motion:reduce){
+  .stage .orb,.stage .ring,.stage .sq,.stage::before,.hero-fx i,.btn .sheen,.sec--tint::after,.sec--blue::before{animation:none!important}
+  .steps::before{transform:scaleY(1)!important}
+  .js .sh .mk{background-size:100% 100%!important;transition:none}
+  .js .fu{transition-delay:0ms!important}
+}
+
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<div class="stage" aria-hidden="true">
+  <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+  <span class="ring r1"></span><span class="ring r2"></span>
+  <span class="sq s1"></span><span class="sq s2"></span>
+</div>
+
+<aside class="side-l" aria-label="サービスのご案内">
+  <p class="side-logo"><svg viewBox="0 0 26 26" width="22" height="22" fill="#1E1919" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEADHUNTER</span></p>
+  <div class="side-promo">
+    <small>
+      ※本ページに掲載している人物写真は、AIで生成したイメージです。<br>
+      ※エージェントの経歴・掲載求人はいずれも一例であり、実在の個人・求人を示すものではありません。<br>
+      ※取り扱い求人および紹介可能な求人数は、時期・ご経歴・求人企業の採用状況により異なります。<br>
+      ※対応業種は主なものを掲載しています。記載のない業種もご相談いただけます。<br>
+      ※掲載内容は一般的なサービス内容と手続きの流れです。実際の対応方法、選考条件は個別に異なります。
+    </small>
+    <strong>完全紹介制の<br>転職支援。</strong>
+    <div class="meta"><span>紹介制</span><span>全国対応</span></div>
+  </div>
+  <p class="side-copy">有料職業紹介事業<br>厚生労働大臣許可 26-ユ-300711</p>
+</aside>
+
+<aside class="side-r" aria-label="ページメニュー">
+  <span class="side-menu-t">— MENU</span>
+  <nav aria-label="ページ内ナビゲーション">
+    <a href="#top"><i>01</i>トップ<b>→</b></a>
+    <a href="#problem"><i>02</i>お悩み<b>→</b></a>
+    <a href="#intro"><i>03</i>紹介制とは<b>→</b></a>
+    <a href="#numbers"><i>04</i>ネットワーク<b>→</b></a>
+    <a href="#about"><i>05</i>大切にしていること<b>→</b></a>
+    <a href="#value"><i>06</i>4つの姿勢<b>→</b></a>
+    <a href="#service"><i>07</i>サポート内容<b>→</b></a>
+    <a href="#flow"><i>08</i>ご利用の流れ<b>→</b></a>
+    <a href="#safety"><i>09</i>安心の仕組み<b>→</b></a>
+    <a href="#faq"><i>10</i>よくある質問<b>→</b></a>
+  </nav>
+</aside>
+
+<div class="col">
+
+  <header class="head">
+    <p class="head-l"><svg viewBox="0 0 26 26" width="20" height="20" fill="#1E1919" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEADHUNTER</span></p>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-fx" aria-hidden="true">
+      <i class="b1"></i><i class="b2"></i><i class="g1"></i><i class="g2s"></i>
+      <i class="p p1"></i><i class="p p2"></i><i class="p p3"></i><i class="p p4"></i><i class="p p5"></i>
+    </div>
+    <p class="hero-slash">完全紹介制</p>
+    <h1>紹介でつながるから、<br><em>本音</em>でキャリア相談できる。</h1>
+    <p class="hero-lead">厳しい審査を通過した公認エージェントが、<br>相談から入社まで一貫サポート。</p>
+
+
+    <div class="hero-badges">
+      <span>全国対応</span><span>オンライン対応</span><span>完全無料</span>
+    </div>
+
+      <div class="hero-hh fu">
+        <div class="hh-row">
+          <div class="hh-track">
+          <article class="hh"><img src="images/agent-1.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>人材紹介10年の<br>知見を活かして。</strong><span class="hh-role">大手人材会社 出身</span></div></article>
+          <article class="hh"><img src="images/agent-9.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>同世代だから、<br>話しやすい。</strong><span class="hh-role">人材ベンチャー 出身</span></div></article>
+          <article class="hh"><img src="images/agent-2.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>採用する側の<br>目線でお伝え。</strong><span class="hh-role">メガベンチャー 元人事</span></div></article>
+          <article class="hh"><img src="images/agent-11.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>第二新卒の<br>相談が得意。</strong><span class="hh-role">新卒紹介 出身</span></div></article>
+          <article class="hh"><img src="images/agent-3.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>事業をつくる<br>側の視点で。</strong><span class="hh-role">SaaSスタートアップ COO</span></div></article>
+          <article class="hh"><img src="images/agent-10.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>はじめての転職に<br>寄り添う。</strong><span class="hh-role">大手求人媒体 出身</span></div></article>
+          <article class="hh"><img src="images/agent-1.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>人材紹介10年の<br>知見を活かして。</strong><span class="hh-role">大手人材会社 出身</span></div></article>
+          <article class="hh"><img src="images/agent-9.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>同世代だから、<br>話しやすい。</strong><span class="hh-role">人材ベンチャー 出身</span></div></article>
+          <article class="hh"><img src="images/agent-2.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>採用する側の<br>目線でお伝え。</strong><span class="hh-role">メガベンチャー 元人事</span></div></article>
+          <article class="hh"><img src="images/agent-11.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>第二新卒の<br>相談が得意。</strong><span class="hh-role">新卒紹介 出身</span></div></article>
+          <article class="hh"><img src="images/agent-3.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>事業をつくる<br>側の視点で。</strong><span class="hh-role">SaaSスタートアップ COO</span></div></article>
+          <article class="hh"><img src="images/agent-10.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>はじめての転職に<br>寄り添う。</strong><span class="hh-role">大手求人媒体 出身</span></div></article>
+          </div>
+        </div>
+        <div class="hh-row hh-row--rev">
+          <div class="hh-track">
+          <article class="hh"><img src="images/agent-4.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>ハイクラス支援の<br>経験を活かして。</strong><span class="hh-role">外資系コンサル 出身</span></div></article>
+          <article class="hh"><img src="images/agent-12.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>等身大の目線で<br>お伝えします。</strong><span class="hh-role">インサイドセールス 出身</span></div></article>
+          <article class="hh"><img src="images/agent-5.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>未経験からの<br>転職に強い。</strong><span class="hh-role">ITベンチャー 執行役員</span></div></article>
+          <article class="hh"><img src="images/agent-6.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>現場を知るから<br>ミスマッチを防ぐ。</strong><span class="hh-role">建設・不動産 出身</span></div></article>
+          <article class="hh"><img src="images/agent-7.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>女性のキャリアに<br>寄り添う。</strong><span class="hh-role">RPO・フリーランス人事</span></div></article>
+          <article class="hh"><img src="images/agent-8.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>地方・Uターンの<br>ご相談も。</strong><span class="hh-role">地域人材会社 出身</span></div></article>
+          <article class="hh"><img src="images/agent-4.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>ハイクラス支援の<br>経験を活かして。</strong><span class="hh-role">外資系コンサル 出身</span></div></article>
+          <article class="hh"><img src="images/agent-12.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>等身大の目線で<br>お伝えします。</strong><span class="hh-role">インサイドセールス 出身</span></div></article>
+          <article class="hh"><img src="images/agent-5.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>未経験からの<br>転職に強い。</strong><span class="hh-role">ITベンチャー 執行役員</span></div></article>
+          <article class="hh"><img src="images/agent-6.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>現場を知るから<br>ミスマッチを防ぐ。</strong><span class="hh-role">建設・不動産 出身</span></div></article>
+          <article class="hh"><img src="images/agent-7.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>女性のキャリアに<br>寄り添う。</strong><span class="hh-role">RPO・フリーランス人事</span></div></article>
+          <article class="hh"><img src="images/agent-8.webp" alt="" decoding="async"/><div class="hh-txt"><span class="hh-badge">公認エージェント</span><strong>地方・Uターンの<br>ご相談も。</strong><span class="hh-role">地域人材会社 出身</span></div></article>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- MEDIA -->
+  <section class="media">
+    <p class="media-t"><b>40以上のメディア</b>に掲載されました</p>
+    <div class="media-wrap">
+      <div class="media-track">
+        <img src="images/img-3.webp" alt="掲載メディア"/>
+        <img src="images/img-3.webp" alt="" aria-hidden="true"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="sec sec--tint" id="problem">
+    <div class="sh fu">
+      <span class="eb">PROBLEM</span>
+      <h2>転職エージェントに、<br><span class="mk">こんなお悩みありませんか？</span></h2>
+    </div>
+    <div class="wl">
+      <div class="wb fu"><b>営業ノルマ</b><p>ノルマがあるから<br><em>転職させたい圧がある…</em></p></div>
+      <div class="wb wb--r fu"><b>担当者</b><p>担当がコロコロ変わって<br><em>一から説明し直し…</em></p></div>
+      <div class="wb fu"><b>本音</b><p>建前ばかりで<br><em>本音で相談できない…</em></p></div>
+      <div class="wb wb--r fu"><b>求人の量</b><p>大量に送られてくるだけで<br><em>自分に合うのか分からない…</em></p></div>
+    </div>
+    <div class="wsum fu">
+      <span>その悩み、すべて</span>
+      <strong><i>HEADHUNTER</i>が</strong>
+      <strong class="u">解決します。</strong>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="sec intro" id="intro">
+    <span class="intro-ghost" aria-hidden="true">ABOUT US ABOUT US</span>
+    <div class="intro-in">
+      <span class="intro-rule fu" aria-hidden="true"></span>
+      <h2 class="fu">紹介制のパーソナル<br><span class="hl">転職エージェント。</span></h2>
+      <p class="fu">HEADHUNTERは、<br><b>紹介がある人だけ</b>が使える<br>転職エージェント。</p>
+      <p class="fu">厳しい審査を通過した公認エージェントが、<br><b>最初から最後まで専任</b>で伴走。</p>
+      <p class="fu">転職を決めていなくてもいい。<br>まずは<b>相談から</b>。</p>
+      <div class="ic-row fu">
+        <div class="ic"><span>REFERRAL</span><strong>完全紹介制</strong></div>
+        <i>×</i>
+        <div class="ic ic--b"><span>DEDICATED</span><strong>マンツーマン</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NETWORK -->
+  <section class="sec sec--blue" id="numbers">
+    <div class="net-fx" aria-hidden="true">
+      <i class="no1"></i><i class="no2"></i><i class="no3"></i>
+      <i class="nb1"></i><i class="nb2"></i><i class="nb3"></i>
+      <i class="nr1"></i><i class="nr2"></i><i class="nq1"></i>
+      <i class="np np1"></i><i class="np np2"></i><i class="np np3"></i>
+      <i class="np np4"></i><i class="np np5"></i><i class="np np6"></i>
+      <svg class="nlink" viewBox="0 0 400 700" preserveAspectRatio="none">
+        <polyline points="40,120 150,60 260,150 360,90"/>
+        <polyline points="20,420 120,500 240,430 380,520"/>
+        <circle cx="40" cy="120" r="3"/><circle cx="150" cy="60" r="3"/><circle cx="260" cy="150" r="3"/><circle cx="360" cy="90" r="3"/>
+        <circle cx="20" cy="420" r="3"/><circle cx="120" cy="500" r="3"/><circle cx="240" cy="430" r="3"/><circle cx="380" cy="520" r="3"/>
+      </svg>
+    </div>
+    <div class="sh fu">
+      <span class="eb">NETWORK</span>
+      <h2>紹介できる求人は、<br><span class="mk">全国・全業種に。</span></h2>
+    </div>
+
+    <div class="nmain fu">
+      <span class="nmain-l">紹介可能求人</span>
+      <p class="nmain-v"><b>10</b><i>万件以上</i></p>
+      <span class="nmain-s">提携求人データベースを含む</span>
+    </div>
+    <p class="nind-t">取り扱い企業</p>
+    <div class="ncomp fu">
+      <span>東証プライム上場</span>
+      <span>大手グループ</span>
+      <span>メガベンチャー</span>
+      <span>シリーズA〜Cスタートアップ</span>
+      <span>外資系</span>
+      <span>老舗メーカー</span>
+      <span>業界シェア上位</span>
+      <span>地域No.1企業</span>
+      <span>非公開ポジション</span>
+    </div>
+    <p class="ncomp-n fu">上場企業から成長スタートアップまで、<b>規模・フェーズを問わず</b>。</p>
+
+    <div class="jslide fu">
+      <div class="jslide-track">
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">IT・Web</span><strong>プロダクトマネージャー</strong><span class="jc-no">No.0017</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>700〜1,000</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>リモート可</span><span>裁量労働</span></div><span class="jc-co">東証プライム上場 SaaS</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">営業</span><strong>法人営業（新規開拓）</strong><span class="jc-no">No.0034</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>450〜700</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京・大阪</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>インセンティブ</span><span>未経験歓迎</span></div><span class="jc-co">メガベンチャー</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">建設・不動産</span><strong>施工管理</strong><span class="jc-no">No.0051</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜800</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>資格取得支援</span><span>転勤相談可</span></div><span class="jc-co">業界シェア上位</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">製造・工場</span><strong>生産管理</strong><span class="jc-no">No.0068</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>400〜600</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>愛知</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>年休125日</span></div><span class="jc-co">老舗メーカー</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">医療・介護</span><strong>サービス提供責任者</strong><span class="jc-no">No.0085</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜450</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>神奈川</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>賞与年2回</span><span>資格活かせる</span></div><span class="jc-co">地域の優良企業</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">物流・運輸</span><strong>ドライバー</strong><span class="jc-no">No.0102</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>300〜420</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>埼玉</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>未経験歓迎</span><span>面接1回</span></div><span class="jc-co">地場物流会社</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">管理部門</span><strong>経理（マネージャー候補）</strong><span class="jc-no">No.0119</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜750</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>在宅併用</span><span>フレックス</span></div><span class="jc-co">上場グループ</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">IT・Web</span><strong>Webエンジニア</strong><span class="jc-no">No.0136</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>550〜850</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>フルリモート</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>副業可</span><span>服装自由</span></div><span class="jc-co">シリーズB スタートアップ</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">金融・保険</span><strong>法人コンサルティング</strong><span class="jc-no">No.0153</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜900</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>年休125日</span><span>産育休実績</span></div><span class="jc-co">大手金融</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">販売・サービス</span><strong>店長候補</strong><span class="jc-no">No.0170</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜500</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>未経験歓迎</span></div><span class="jc-co">全国チェーン</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">IT・Web</span><strong>プロダクトマネージャー</strong><span class="jc-no">No.0017</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>700〜1,000</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>リモート可</span><span>裁量労働</span></div><span class="jc-co">東証プライム上場 SaaS</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">営業</span><strong>法人営業（新規開拓）</strong><span class="jc-no">No.0034</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>450〜700</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京・大阪</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>インセンティブ</span><span>未経験歓迎</span></div><span class="jc-co">メガベンチャー</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">建設・不動産</span><strong>施工管理</strong><span class="jc-no">No.0051</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜800</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>資格取得支援</span><span>転勤相談可</span></div><span class="jc-co">業界シェア上位</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">製造・工場</span><strong>生産管理</strong><span class="jc-no">No.0068</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>400〜600</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>愛知</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>年休125日</span></div><span class="jc-co">老舗メーカー</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">医療・介護</span><strong>サービス提供責任者</strong><span class="jc-no">No.0085</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜450</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>神奈川</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>賞与年2回</span><span>資格活かせる</span></div><span class="jc-co">地域の優良企業</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">物流・運輸</span><strong>ドライバー</strong><span class="jc-no">No.0102</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>300〜420</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>埼玉</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>未経験歓迎</span><span>面接1回</span></div><span class="jc-co">地場物流会社</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">管理部門</span><strong>経理（マネージャー候補）</strong><span class="jc-no">No.0119</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜750</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>在宅併用</span><span>フレックス</span></div><span class="jc-co">上場グループ</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">IT・Web</span><strong>Webエンジニア</strong><span class="jc-no">No.0136</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>550〜850</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>フルリモート</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>副業可</span><span>服装自由</span></div><span class="jc-co">シリーズB スタートアップ</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">金融・保険</span><strong>法人コンサルティング</strong><span class="jc-no">No.0153</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜900</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>年休125日</span><span>産育休実績</span></div><span class="jc-co">大手金融</span></div>
+        </article>
+        <article class="jc">
+          <div class="jc-h"><span class="jc-tag">販売・サービス</span><strong>店長候補</strong><span class="jc-no">No.0170</span></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜500</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>未経験歓迎</span></div><span class="jc-co">全国チェーン</span></div>
+        </article>
+      </div>
+    </div>
+
+    <p class="nind-t">対応業種</p>
+    <div class="nind fu">
+        <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span>IT・Web</span></div>
+        <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V4h8v3"/></svg><span>営業</span></div>
+        <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg><span>建設・不動産</span></div>
+        <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9"/></svg><span>製造・工場</span></div>
+        <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M9 6V4h6v2M12 11v6M9 14h6"/></svg><span>医療・介護</span></div>
+        <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 7h11.5v9H2.5zM14 10.5h4l3.5 3.5V16H14z"/><circle cx="7" cy="18.5" r="1.8"/><circle cx="17.5" cy="18.5" r="1.8"/></svg><span>物流・運輸</span></div>
+        <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5h17l-1.4 12.5H4.9z"/><path d="M9 7.5V5.5a3 3 0 0 1 6 0v2"/></svg><span>販売・サービス</span></div>
+        <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 12h7M9 16h7"/></svg><span>管理部門</span></div>
+        <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10.5M10 20V4.5M16 20v-7M22 20.5H2"/></svg><span>金融・保険</span></div>
+        <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-1.8H4zM20 4.5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-1.8h6z"/></svg><span>教育・公務</span></div>
+    </div>
+    <p class="nind-t">対応年収帯</p>
+    <div class="nsal fu">
+      <div class="nsal-scale" aria-hidden="true"><i></i><i></i><i></i></div>
+      <span>〜300万</span>
+      <span>300万台</span>
+      <span>400万台</span>
+      <span>500万台</span>
+      <span>600万台</span>
+      <span>700万台</span>
+      <span>800万台</span>
+      <span>1,000万〜</span>
+    </div>
+    <p class="nsal-n fu">未経験・第二新卒からハイクラスまで。<br>ご相談の中心は<b>年収300〜600万円台</b>です。</p>
+    <div class="nadv fu">
+      <span class="nadv-l">さらに</span>
+      <div class="nadv-row">
+        <div class="nadv-c"><span>MAIN</span><b>メイン<br>エージェント</b></div>
+        <i>＋</i>
+        <div class="nadv-c nadv-c--a"><span>ADVISOR</span><b>専門<br>アドバイザー</b></div>
+      </div>
+      <p>各部門に精通したエージェントが在籍。<br>メイン担当に<b>専門アドバイザーを追加</b>することもできます。</p>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <div class="bridge"><span>大切にしているのは、ここです。</span></div>
+  <section class="sec" id="about">
+    <div class="sh fu">
+      <span class="eb">ABOUT</span>
+      <h2>転職サービスを、<br><span class="mk">もっとパーソナルに。</span></h2>
+      <p>条件だけではわからない、その人自身を。</p>
+    </div>
+
+    <div class="vs fu">
+      <div class="vs-c">
+        <span class="vs-t">一般的な転職サービス</span>
+        <ul>
+          <li>誰でも登録できる</li>
+          <li>初対面の担当者</li>
+          <li>「数」で勝負</li>
+        </ul>
+      </div>
+      <span class="vs-x">VS</span>
+      <div class="vs-c vs-c--hh">
+        <span class="vs-t">HEADHUNTER</span>
+        <ul>
+          <li>紹介がある方だけ</li>
+          <li>紹介でつながる担当</li>
+          <li>「理由」まで説明</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="ab-lead fu">だから、こんなことから伺います。</p>
+
+    <div class="ab">
+      <article class="ab-c fu"><span class="ab-n">01</span><div class="ab-t"><span class="ab-e">EXPERIENCE</span><strong>これまでの経験</strong><span class="ab-d">何を積み重ねてきたか</span></div><p class="ab-q">どんな仕事のとき、時間を忘れていましたか？</p></article>
+      <article class="ab-c fu"><span class="ab-n">02</span><div class="ab-t"><span class="ab-e">VALUES</span><strong>大切にしていること</strong><span class="ab-d">働くうえでの価値観</span></div><p class="ab-q">次の会社で、我慢したくないことは？</p></article>
+      <article class="ab-c fu"><span class="ab-n">03</span><div class="ab-t"><span class="ab-e">STRENGTHS</span><strong>得意なこと</strong><span class="ab-d">自然と力を発揮できる場面</span></div><p class="ab-q">まわりから、よく何を頼まれますか？</p></article>
+      <article class="ab-c fu"><span class="ab-n">04</span><div class="ab-t"><span class="ab-e">VISION</span><strong>実現したいこと</strong><span class="ab-d">これから向かいたい方向</span></div><p class="ab-q">3年後、どうなっていたいですか？</p></article>
+    </div>
+
+    <div class="ab-flow fu">
+      <span>対話</span><i>→</i><span>整理</span><i>→</i><span>提案</span>
+    </div>
+    <p class="ab-sum fu">紹介でつながったご縁だから、<br><b>その場かぎりではない対応</b>をお約束します。</p>
+  </section>
+
+  <!-- VALUE -->
+  <section class="sec sec--tint" id="value">
+    <div class="sh fu">
+      <span class="eb">VALUE</span>
+      <h2>一人ひとりに<br><span class="mk">向き合う4つの姿勢。</span></h2>
+    </div>
+    <div class="nlist fu">
+      <div class="nrow"><b>01</b><div><strong>あなたを理解した担当者</strong><span>経歴だけでなく、価値観まで踏まえて考えます。</span></div></div>
+      <div class="nrow"><b>02</b><div><strong>「数」ではなく「理由」で提案</strong><span>なぜこの求人なのか、までお伝えします。</span></div></div>
+      <div class="nrow"><b>03</b><div><strong>転職を急がせません</strong><span>「今の会社に残る」という結論でも問題ありません。</span></div></div>
+      <div class="nrow"><b>04</b><div><strong>入社まで一貫サポート</strong><span>書類・面接・企業調整・条件確認まで。</span></div></div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section class="sec" id="service">
+    <div class="sh fu">
+      <span class="eb">SERVICE</span>
+      <h2>相談から入社まで、<br><span class="mk">まるごとサポート。</span></h2>
+    </div>
+    <div class="g2 fu">
+      <div class="tile"><i>01</i><strong>キャリア相談</strong><span>これからを一緒に整理</span></div>
+      <div class="tile"><i>02</i><strong>求人紹介</strong><span>経験と希望を踏まえて</span></div>
+      <div class="tile"><i>03</i><strong>応募書類</strong><span>作成と改善をサポート</span></div>
+      <div class="tile"><i>04</i><strong>面接対策</strong><span>企業に合わせて準備</span></div>
+      <div class="tile"><i>05</i><strong>企業との調整</strong><span>日程も選考もお任せ</span></div>
+      <div class="tile"><i>06</i><strong>条件確認・入社</strong><span>年収交渉から手続きまで</span></div>
+    </div>
+  </section>
+
+
+
+  <!-- FLOW -->
+  <div class="bridge"><span>では、どう進むの？</span></div>
+  <section class="sec" id="flow">
+    <div class="sh fu">
+      <span class="eb">FLOW</span>
+      <h2>相談から転職まで、<br><span class="mk">5ステップ。</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step fu"><b>STEP 01</b><strong>LINEで相談</strong><span>時期も希望も未定で大丈夫です。</span></div>
+      <div class="step fu"><b>STEP 02</b><strong>キャリアヒアリング</strong><span>経験とこれからを伺います。オンライン可。</span></div>
+      <div class="step fu"><b>STEP 03</b><strong>求人をご紹介</strong><span>興味がなければ、応募の必要はありません。</span></div>
+      <div class="step fu"><b>STEP 04</b><strong>選考サポート</strong><span>書類・面接対策・企業との調整まで。</span></div>
+      <div class="step fu"><b>STEP 05</b><strong>内定・入社</strong><span>条件確認から手続きまでサポート。</span></div>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <div class="bridge"><span>安心して使ってもらうために。</span></div>
+  <section class="sec" id="safety">
+    <div class="sh fu">
+      <span class="eb">SAFETY</span>
+      <h2>キャリアのことだから、<br><span class="mk">仕組みで守る。</span></h2>
+    </div>
+    <div class="safe">
+      <div class="fu"><strong>費用は一切かかりません</strong><p>採用が決まった企業からいただく仕組みです。</p></div>
+      <div class="fu"><strong>許可なく企業へ送りません</strong><p>応募も情報共有も、必ずご本人の判断で。</p></div>
+      <div class="fu"><strong>勤務先に知られません</strong><p>現在の勤務先へ連絡することはありません。</p></div>
+      <div class="fu"><strong>転職しない選択も尊重</strong><p>キャリアの整理だけでもご利用いただけます。</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <div class="bridge"><span>最後に、よくある質問を。</span></div>
+  <section class="sec sec--tint faq" id="faq">
+    <div class="sh fu">
+      <span class="eb">FAQ</span>
+      <h2>よくある<br><span class="mk">ご質問。</span></h2>
+    </div>
+    <details class="fu"><summary><i>Q</i>転職するか決めていません。<b>+</b></summary>
+      <div class="faq-a"><i>A</i><p>情報収集やキャリアの整理からご相談いただけます。</p></div></details>
+    <details class="fu"><summary><i>Q</i>利用料金はかかりますか？<b>+</b></summary>
+      <div class="faq-a"><i>A</i><p>かかりません。採用企業から紹介料をいただく仕組みです。</p></div></details>
+    <details class="fu"><summary><i>Q</i>紹介されたら応募が必要？<b>+</b></summary>
+      <div class="faq-a"><i>A</i><p>いいえ。興味を持った場合のみ応募いただきます。</p></div></details>
+    <details class="fu"><summary><i>Q</i>個人情報が勝手に送られる？<b>+</b></summary>
+      <div class="faq-a"><i>A</i><p>ありません。必ずご本人の意思を確認したうえで行います。</p></div></details>
+    <details class="fu"><summary><i>Q</i>どのような求人がありますか？<b>+</b></summary>
+      <div class="faq-a"><i>A</i><p>時期により異なります。ご希望を伺ったうえでご案内します。</p></div></details>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing" id="closing">
+    <div class="sh fu">
+      <span class="eb">OUR STANCE</span>
+      <h2>選択肢は、<br><span class="mk">知ってから決めればいい。</span></h2>
+      <p>転職ありきのサービスではありません。<br>納得したうえでキャリアを決めることを、大切にしています。</p>
+    </div>
+    <div class="cl-chips fu"><span>有料職業紹介事業</span><span>審査制エージェント</span><span>全国オンライン対応</span></div>
+  </section>
+
+  <footer class="foot">
+    <p class="foot-logo"><svg viewBox="0 0 26 26" width="17" height="17" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEADHUNTER</span></p>
+    <dl>
+      <dt>事業区分</dt><dd>有料職業紹介事業</dd>
+      <dt>許可番号</dt><dd>26-ユ-300711（厚生労働大臣許可）</dd>
+      <dt>所在地</dt><dd class="tbd">〇〇</dd>
+      <dt>お問い合わせ</dt><dd class="tbd">〇〇</dd>
+    </dl>
+    <p class="foot-links"><a href="#">プライバシーポリシー</a><a href="#">利用規約</a><a href="#">職業紹介に関する表記</a></p>
+    <p class="cr">© HEADHUNTER</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* コンテナ単位の .fu を子要素へ展開し、順番に出す */
+  ['.g2','.chips','.nlist','.spec','.nums','.safe','.steps'].forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(box){
+      box.classList.remove('fu');
+      Array.prototype.forEach.call(box.children, function(c, i){
+        c.classList.add('fu');
+        c.style.setProperty('--i', i);
+      });
+    });
+  });
+  document.querySelectorAll('.faq details').forEach(function(d, i){ d.style.setProperty('--i', i); });
+
+  var obs = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.fu').forEach(function(el){ obs.observe(el); });
+
+  /* ステップの縦線を伸ばす */
+  var steps = document.querySelector('.steps');
+  if (steps) {
+    var lo = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('lit'); lo.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    lo.observe(steps);
+  }
+})();
+
+</script>
+</body>
+</html>

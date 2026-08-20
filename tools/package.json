@@ -1,0 +1,10 @@
+{
+  "name": "headhunter-lp-tools",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "LP用の画像生成・変換ツール（デプロイ対象外）",
+  "dependencies": {
+    "sharp": "^0.34.0"
+  }
+}

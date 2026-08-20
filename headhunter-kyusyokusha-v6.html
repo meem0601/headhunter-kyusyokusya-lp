@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HEADHUNTER｜あなたを知る人だからこそ、見つけられるキャリアがある。</title>
+<meta name="description" content="HEADHUNTERは、審査を通過したヘッドハンターが一人ひとりの経験や価値観を理解したうえでキャリアを支援する転職サービスです。相談は無料、転職するか未定でもご利用いただけます。運営：株式会社MEEM"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --blue:#0000D4;--blue-d:#0000B2;--blue-ll:#7A98FF;--tint:#EEF0FF;
+  --ink:#0C1024;--text:#1E1919;--sub:#5F5A59;--mute:#8A837E;
+  --bg:#FFFFFF;--bg2:#F7F5F2;--line:#E4E2DE;--line-d:#CFCCC7;
+  --fj:'Noto Sans JP',sans-serif;
+  --fe:'Poppins','Noto Sans JP',sans-serif;
+  --pad:clamp(20px,5vw,28px);
+  --sy:clamp(56px,9vw,96px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:68px}
+body{font-family:var(--fj);color:var(--text);background:var(--bg);line-height:1.9;letter-spacing:.01em;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+p{text-wrap:pretty}
+h1,h2,h3{text-wrap:balance;letter-spacing:-.01em}
+.wrap{width:min(1080px,100%);margin:0 auto;padding-inline:var(--pad)}
+.tbd{border-bottom:1px dotted var(--line-d)}
+
+/* header */
+.hd{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.hd-in{display:flex;align-items:center;gap:20px;height:64px}
+.hd-logo{display:flex;align-items:center;gap:9px;flex:none}
+.hd-logo span{font-family:var(--fe);font-size:15px;font-weight:700;letter-spacing:.13em;color:var(--ink)}
+.hd-nav{display:none}
+.hd-cta{display:none;margin-left:auto;flex:none;align-items:center;gap:8px;background:var(--blue);color:#fff;font-size:13px;font-weight:700;padding:11px 18px;border-radius:3px}
+.hd-cta i{width:8px;height:8px;border-radius:50%;background:#06C755}
+@media (min-width:1000px){
+  .hd-nav{display:flex;gap:26px;margin-left:14px}
+  .hd-cta{display:inline-flex}
+  .hd-nav a{font-size:13.5px;font-weight:600;color:var(--sub);transition:color .2s}
+  .hd-nav a:hover{color:var(--blue)}
+}
+
+/* first view */
+.fv{position:relative;background:var(--bg2);border-bottom:1px solid var(--line);overflow:hidden}
+.fv::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.5}
+.fv-in{position:relative;padding:clamp(40px,7vw,72px) 0 clamp(36px,6vw,60px)}
+.fv-eb{display:flex;align-items:center;gap:11px;font-family:var(--fe);font-size:11px;font-weight:700;letter-spacing:.24em;color:var(--blue);margin-bottom:20px}
+.fv-eb::before{content:"";width:26px;height:1px;background:var(--blue)}
+.fv h1{font-size:clamp(25px,5.6vw,50px);font-weight:900;line-height:1.55;color:var(--ink);word-break:auto-phrase}
+.fv h1 em{font-style:normal;color:var(--blue)}
+.fv-sub{margin-top:24px;max-width:44em;font-size:clamp(13.5px,1.5vw,15.5px);line-height:2.1;color:var(--sub)}
+.fv-sub+.fv-sub{margin-top:14px}
+.fv-cta{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.fv-note{font-size:12.5px;font-weight:600;color:var(--sub)}
+.fv-agent{margin-top:30px;display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:3px;padding:11px 16px}
+.fv-agent b{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--mute)}
+.fv-agent strong{font-size:15px;font-weight:800;color:var(--ink)}
+@media (min-width:900px){
+  .fv-in{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:center}
+  .fv-visual{align-self:stretch;display:flex;align-items:flex-end}
+  .fv-visual img{width:100%;border-radius:3px;background:#fff;border:1px solid var(--line)}
+}
+.fv-visual{display:none}
+@media (min-width:900px){.fv-visual{display:flex}}
+
+.btn{display:inline-grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;
+  background:var(--blue);color:#fff;font-size:clamp(15px,1.7vw,17px);font-weight:800;letter-spacing:.02em;
+  padding:17px 26px;border-radius:3px;border:1px solid var(--blue);transition:background .2s,transform .2s}
+.btn::before{content:"";width:10px;height:10px;border-radius:50%;background:#06C755}
+.btn::after{content:"→";font-family:var(--fe);font-weight:600}
+.btn:hover{background:var(--blue-d);transform:translateY(-1px)}
+.btn--gh{background:#fff;color:var(--blue);border-color:var(--blue)}
+.btn--gh:hover{background:var(--tint)}
+
+/* section frame */
+.sec{padding:var(--sy) 0;border-bottom:1px solid var(--line)}
+.sec--bg{background:var(--bg2)}
+.sec--ink{background:var(--ink);color:#fff;border-bottom:0}
+.sh{margin-bottom:clamp(30px,4vw,44px)}
+.sh-no{display:flex;align-items:center;gap:11px;font-family:var(--fe);font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--blue);margin-bottom:16px}
+.sh-no::after{content:"";flex:1;height:1px;background:var(--line);max-width:70px}
+.sec--ink .sh-no{color:var(--blue-ll)}
+.sec--ink .sh-no::after{background:rgba(255,255,255,.22)}
+.sh h2{font-size:clamp(22px,3.4vw,34px);font-weight:900;line-height:1.55;color:var(--ink);word-break:auto-phrase}
+.sec--ink .sh h2{color:#fff}
+.sh-lead{margin-top:20px;max-width:46em;font-size:clamp(13.5px,1.4vw,15px);line-height:2.1;color:var(--sub)}
+.sec--ink .sh-lead{color:rgba(255,255,255,.76)}
+.sh-lead+.sh-lead{margin-top:14px}
+.sh-lead b{font-weight:700;color:var(--text)}
+@media (min-width:960px){
+  .split{display:grid;grid-template-columns:minmax(330px,368px) 1fr;gap:0 64px;align-items:start}
+  .split .sh{position:sticky;top:96px;margin-bottom:0}
+  .split .sh h2{font-size:clamp(21px,2.3vw,27px);line-height:1.65}
+  .split .sh-lead{max-width:none;font-size:13px}
+}
+.note{margin-top:20px;font-size:11.5px;line-height:1.85;color:var(--mute)}
+.sec--ink .note{color:rgba(255,255,255,.55)}
+
+/* generic card grid */
+.grid{display:grid;gap:14px}
+@media (min-width:640px){.grid--2{grid-template-columns:1fr 1fr}}
+@media (min-width:640px){.grid--3{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.grid--3{grid-template-columns:repeat(3,1fr)}}
+
+.card{background:#fff;border:1px solid var(--line);border-radius:3px;padding:24px 22px}
+.sec--bg .card{background:#fff}
+.card-ic{display:grid;place-items:center;width:34px;height:34px;border-radius:2px;background:var(--tint);color:var(--blue);font-family:var(--fe);font-size:13px;font-weight:700;margin-bottom:14px}
+.card h3{font-size:16px;font-weight:800;line-height:1.6;color:var(--ink);margin-bottom:8px}
+.card p{font-size:13px;line-height:2;color:var(--sub)}
+
+/* value list */
+.vlist{border-top:1px solid var(--line)}
+.vitem{display:grid;gap:6px 26px;padding:26px 0;border-bottom:1px solid var(--line)}
+.vitem b{font-family:var(--fe);font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--blue)}
+.vitem h3{font-size:clamp(17px,2vw,20px);font-weight:900;line-height:1.6;color:var(--ink)}
+.vitem p{font-size:13.5px;line-height:2.05;color:var(--sub)}
+@media (min-width:760px){.vitem{grid-template-columns:64px 1fr}.vitem b{padding-top:6px}}
+
+/* spec table */
+.spec{border-top:1px solid var(--line)}
+.spec-row{display:grid;gap:2px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
+.spec-row dt{font-size:13px;font-weight:800;color:var(--ink)}
+.spec-row dd{font-size:13.5px;color:var(--sub)}
+.spec-row dd span{display:inline-block;margin:3px 6px 3px 0;background:var(--bg2);border:1px solid var(--line);border-radius:2px;padding:5px 11px;font-size:12.5px;font-weight:600;color:var(--text)}
+@media (min-width:640px){.spec-row{grid-template-columns:180px 1fr;align-items:baseline}}
+
+/* numbers */
+.nums{display:grid;gap:1px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16)}
+@media (min-width:640px){.nums{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.nums{grid-template-columns:repeat(4,1fr)}}
+.num{background:var(--ink);padding:28px 22px;text-align:center}
+.num b{display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:10px}
+.num strong{font-family:var(--fe);font-size:clamp(30px,4vw,42px);font-weight:700;line-height:1.1;color:#fff}
+.num strong i{font-style:normal;font-family:var(--fj);font-size:15px;font-weight:700;margin-left:4px}
+
+/* flow */
+.flow{position:relative;padding-left:30px}
+.flow::before{content:"";position:absolute;left:6px;top:14px;bottom:14px;width:1px;background:var(--line-d)}
+.step{position:relative;padding:0 0 30px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:-30px;top:7px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.step b{display:block;font-family:var(--fe);font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--blue);margin-bottom:4px}
+.step h3{font-size:17px;font-weight:900;line-height:1.6;color:var(--ink);margin-bottom:7px}
+.step p{font-size:13.5px;line-height:2.05;color:var(--sub)}
+
+/* agent profile */
+.ag{background:#fff;border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.ag-top{display:grid;gap:20px;padding:28px 24px;border-bottom:1px solid var(--line);background:var(--bg2)}
+.ag-photo{width:104px;height:104px;border-radius:50%;object-fit:cover;background:#fff;border:1px solid var(--line)}
+.ag-name b{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--mute);margin-bottom:5px}
+.ag-name strong{font-size:23px;font-weight:900;color:var(--ink)}
+@media (min-width:640px){.ag-top{grid-template-columns:auto 1fr;align-items:center}}
+.ag-body{padding:26px 24px}
+.ag-lb{display:inline-block;font-family:var(--fe);font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--blue);margin-bottom:12px}
+.ag-msg{font-size:14px;line-height:2.1;color:var(--sub)}
+.ag-msg+.ag-lb{margin-top:26px}
+.ag-prof{border-top:1px solid var(--line);margin-top:8px}
+.ag-prof div{display:grid;gap:2px 20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.ag-prof dt{font-size:12.5px;font-weight:800;color:var(--ink)}
+.ag-prof dd{font-size:13.5px;color:var(--sub)}
+@media (min-width:640px){.ag-prof div{grid-template-columns:120px 1fr}}
+
+/* safety */
+.safe{border-top:1px solid var(--line)}
+.safe-i{padding:24px 0;border-bottom:1px solid var(--line)}
+.safe-i h3{display:flex;align-items:flex-start;gap:11px;font-size:16.5px;font-weight:900;line-height:1.6;color:var(--ink);margin-bottom:9px}
+.safe-i h3::before{content:"✓";flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;font-size:12px;margin-top:4px}
+.safe-i p{font-size:13.5px;line-height:2.05;color:var(--sub);padding-left:33px}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{display:flex;align-items:flex-start;gap:13px;padding:20px 0;cursor:pointer;list-style:none;font-size:15px;font-weight:800;line-height:1.7;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;font-family:var(--fe);font-style:normal;font-size:14px;font-weight:700;color:var(--blue);margin-top:2px}
+.faq summary b{margin-left:auto;flex:none;font-weight:400;font-size:19px;color:var(--blue);transition:transform .2s;line-height:1.4}
+.faq details[open] summary b{transform:rotate(45deg)}
+.faq-a{display:flex;gap:13px;padding:0 0 22px}
+.faq-a i{flex:none;font-family:var(--fe);font-style:normal;font-size:14px;font-weight:700;color:var(--mute)}
+.faq-a p{font-size:13.5px;line-height:2.05;color:var(--sub)}
+
+/* closing */
+.cl{background:var(--ink);color:#fff;padding:var(--sy) 0;text-align:center}
+.cl h2{font-size:clamp(23px,3.6vw,36px);font-weight:900;line-height:1.6}
+.cl p{margin-top:22px;font-size:clamp(13.5px,1.4vw,15px);line-height:2.15;color:rgba(255,255,255,.78)}
+.cl .btn{margin-top:34px}
+.cl-note{margin-top:16px;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.6)}
+
+/* footer */
+.ft{background:#07091A;color:rgba(255,255,255,.6);padding:48px 0 34px;font-size:12.5px}
+.ft-logo{display:flex;align-items:center;gap:9px;margin-bottom:22px}
+.ft-logo span{font-family:var(--fe);font-size:15px;font-weight:700;letter-spacing:.13em;color:#fff}
+.ft dl{display:grid;gap:5px 16px;line-height:1.9;margin-bottom:22px}
+.ft dt{font-weight:700;color:rgba(255,255,255,.85)}
+@media (min-width:640px){.ft dl{grid-template-columns:auto 1fr;max-width:640px}}
+.ft-links{display:flex;flex-wrap:wrap;gap:10px 22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+.ft-links a{color:rgba(255,255,255,.75)}
+.ft-links a:hover{color:#fff}
+.ft-cr{margin-top:26px;font-family:var(--fe);font-size:11px;color:rgba(255,255,255,.35)}
+
+/* mobile fixed cta */
+.fx{position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;align-items:center;gap:12px;
+  padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line)}
+.fx em{font-style:normal;font-size:11.5px;font-weight:800;color:var(--blue);line-height:1.4}
+.fx .btn{flex:1;padding:14px 16px;font-size:14.5px}
+body{padding-bottom:82px}
+@media (min-width:1000px){.fx{display:none}body{padding-bottom:0}}
+
+.fu{opacity:0;transform:translateY(16px)}
+.js .fu{transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.js .fu.in,html:not(.js) .fu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .fu{opacity:1;transform:none;transition:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="hd-logo" href="#top">
+      <svg viewBox="0 0 26 26" width="22" height="22" fill="#0C1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg>
+      <span>HEADHUNTER</span>
+    </a>
+    <nav class="hd-nav" aria-label="ページ内ナビゲーション">
+      <a href="#trust">安心の体制</a>
+      <a href="#about">HEADHUNTERとは</a>
+      <a href="#value">特徴</a>
+      <a href="#service">サポート内容</a>
+      <a href="#flow">ご利用の流れ</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a class="hd-cta" href="#closing"><i></i>キャリア相談をする</a>
+  </div>
+</header>
+
+<!-- 01 FV -->
+<section class="fv" id="top">
+  <div class="wrap fv-in">
+    <div>
+      <p class="fv-eb">HEADHUNTER</p>
+      <h1>あなたを知る人だからこそ、<br><em>見つけられるキャリア</em>がある。</h1>
+      <p class="fv-sub">HEADHUNTERは、審査を通過したヘッドハンターが、一人ひとりの経験や価値観を理解したうえでキャリアを支援する転職サービスです。</p>
+      <p class="fv-sub">今すぐ転職を決めていなくても構いません。キャリアの相談から求人紹介、選考支援まで一貫してサポートします。</p>
+      <div class="fv-cta">
+        <a class="btn" href="#closing">LINEでキャリア相談をする</a>
+        <p class="fv-note">相談無料｜転職するか未定でもOK</p>
+      </div>
+      <p class="fv-agent"><b>担当ヘッドハンター</b><strong data-agent="name">〇〇 〇〇</strong></p>
+    </div>
+    <div class="fv-visual"><img src="images/img-2.webp" alt=""/></div>
+  </div>
+</section>
+
+<!-- 02 TRUST -->
+<section class="sec" id="trust">
+  <div class="wrap split">
+    <div class="sh fu">
+      <p class="sh-no">01 <span>TRUST</span></p>
+      <h2>信頼できる人から、<br>信頼できる<br>キャリア支援を。</h2>
+    </div>
+    <div>
+      <p class="sh-lead fu">HEADHUNTERでは、誰でもヘッドハンターとして活動できるわけではありません。所定の審査フォーム・面接を通過した人のみが、HEADHUNTERのヘッドハンターとして活動しています。</p>
+      <p class="sh-lead fu">サービスの運営・求人紹介・選考支援の仕組みは<b>株式会社MEEM</b>が提供。あなたを知る担当ヘッドハンターと、運営会社による支援体制の両方でキャリア選択をサポートします。</p>
+      <div class="grid grid--2 fu" style="margin-top:32px">
+        <div class="card"><div class="card-ic">01</div><h3>審査制ヘッドハンター</h3><p>所定の審査・面接を通過した人のみが活動しています。</p></div>
+        <div class="card"><div class="card-ic">02</div><h3>株式会社MEEM運営</h3><p>個人だけではなく、運営会社によるサービス体制を構築しています。</p></div>
+        <div class="card"><div class="card-ic">03</div><h3>求職者の利用料 0円</h3><p>相談・求人紹介・選考サポートまで無料でご利用いただけます。</p></div>
+        <div class="card"><div class="card-ic">04</div><h3>転職を前提としない相談</h3><p>情報収集やキャリア整理だけでもご利用いただけます。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 ABOUT -->
+<section class="sec sec--bg" id="about">
+  <div class="wrap split">
+    <div class="sh fu">
+      <p class="sh-no">02 <span>ABOUT</span></p>
+      <h2>転職サービスを、<br>もっとパーソナルに。</h2>
+    </div>
+    <div>
+      <p class="sh-lead fu">一般的な転職サービスでは、登録後に初めて会う担当者が、職歴や希望条件をもとに求人を提案するケースが一般的です。</p>
+      <p class="sh-lead fu">HEADHUNTERが大切にしているのは、条件だけではわからない、<b>その人自身を理解すること</b>。</p>
+      <div class="grid grid--2 fu" style="margin-top:28px">
+        <div class="card"><h3>これまでの経験</h3></div>
+        <div class="card"><h3>仕事で大切にしていること</h3></div>
+        <div class="card"><h3>得意なこと</h3></div>
+        <div class="card"><h3>これから実現したいこと</h3></div>
+      </div>
+      <p class="sh-lead fu" style="margin-top:28px">あなたを知るヘッドハンターだからこそ、条件だけでは判断できない可能性まで考えながら、キャリアを一緒に整理します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 VALUE -->
+<section class="sec" id="value">
+  <div class="wrap split">
+    <div class="sh fu">
+      <p class="sh-no">03 <span>VALUE</span></p>
+      <h2>一人ひとりに向き合う、<br>HEADHUNTERの転職支援。</h2>
+    </div>
+    <div class="vlist">
+      <div class="vitem fu"><b>01</b><div><h3>あなたを理解した担当者がサポート</h3><p>あなたのことを知るヘッドハンターが担当します。経歴や希望条件だけでなく、これまでの経験や価値観まで踏まえてキャリアを考えます。</p></div></div>
+      <div class="vitem fu"><b>02</b><div><h3>求人は「数」ではなく「理由」で提案</h3><p>大量の求人を一方的に送るのではなく、ヒアリングした内容をもとに求人をご紹介します。「なぜこの求人なのか」まで含めてお伝えします。</p></div></div>
+      <div class="vitem fu"><b>03</b><div><h3>転職を急がせません</h3><p>HEADHUNTERは、転職ありきのサービスではありません。話した結果、「今の会社に残る」という結論になっても問題ありません。まずは選択肢を知り、納得したうえで今後のキャリアを決めることを大切にしています。</p></div></div>
+      <div class="vitem fu"><b>04</b><div><h3>選考から入社まで一貫してサポート</h3><p>求人紹介だけではありません。応募書類の準備、面接対策、企業との調整、条件確認など、転職活動を一貫してサポートします。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 SERVICE -->
+<section class="sec sec--bg" id="service">
+  <div class="wrap split">
+    <div class="sh fu">
+      <p class="sh-no">04 <span>SERVICE</span></p>
+      <h2>転職を考え始めた<br>ときから、入社まで。</h2>
+      <p class="sh-lead">HEADHUNTERでは、キャリアの相談から転職活動まで幅広くサポートしています。</p>
+    </div>
+    <div class="grid grid--3 fu">
+      <div class="card"><div class="card-ic">01</div><h3>キャリア相談</h3><p>現在の仕事やこれからのキャリアについて整理します。</p></div>
+      <div class="card"><div class="card-ic">02</div><h3>求人紹介</h3><p>経験・希望・価値観を踏まえて求人をご紹介します。</p></div>
+      <div class="card"><div class="card-ic">03</div><h3>応募書類サポート</h3><p>履歴書・職務経歴書の作成や改善をサポートします。</p></div>
+      <div class="card"><div class="card-ic">04</div><h3>面接対策</h3><p>企業に合わせた面接準備を一緒に行います。</p></div>
+      <div class="card"><div class="card-ic">05</div><h3>企業との調整</h3><p>面接日程や選考に関する企業とのやり取りをサポートします。</p></div>
+      <div class="card"><div class="card-ic">06</div><h3>条件確認・入社サポート</h3><p>年収や入社条件の確認から、入社までサポートします。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 JOBS -->
+<section class="sec" id="jobs">
+  <div class="wrap split">
+    <div class="sh fu">
+      <p class="sh-no">05 <span>JOBS</span></p>
+      <h2>あなたの経験と<br>これからに合う求人を。</h2>
+    </div>
+    <div>
+      <p class="sh-lead fu">HEADHUNTERでは、さまざまな企業・ポジションの求人をご紹介しています。すべての求人を一律に紹介するのではなく、これまでの経験や希望を確認したうえで、適した求人をご案内します。</p>
+      <dl class="spec fu" style="margin-top:28px">
+        <div class="spec-row"><dt>対応業界</dt><dd><span class="tbd">〇〇</span><span class="tbd">〇〇</span><span class="tbd">〇〇</span><span class="tbd">〇〇</span></dd></div>
+        <div class="spec-row"><dt>対応職種</dt><dd><span class="tbd">〇〇</span><span class="tbd">〇〇</span><span class="tbd">〇〇</span><span class="tbd">〇〇</span></dd></div>
+        <div class="spec-row"><dt>年収レンジ</dt><dd><span class="tbd">〇〇万円〜〇〇万円</span></dd></div>
+        <div class="spec-row"><dt>雇用形態</dt><dd>正社員を中心に紹介</dd></div>
+        <div class="spec-row"><dt>対応エリア</dt><dd><span class="tbd">〇〇</span></dd></div>
+      </dl>
+      <p class="note fu">※取り扱い求人は時期・条件によって異なります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 NUMBERS -->
+<section class="sec sec--ink" id="numbers">
+  <div class="wrap">
+    <div class="sh fu">
+      <p class="sh-no">06 <span>NETWORK</span></p>
+      <h2>HEADHUNTERのネットワーク</h2>
+    </div>
+    <div class="nums fu">
+      <div class="num"><b>登録ヘッドハンター</b><strong class="tbd">〇〇<i>名以上</i></strong></div>
+      <div class="num"><b>紹介可能求人</b><strong class="tbd">〇〇<i>件以上</i></strong></div>
+      <div class="num"><b>取引・求人企業</b><strong class="tbd">〇〇<i>社以上</i></strong></div>
+      <div class="num"><b>対応エリア</b><strong class="tbd">〇〇<i>エリア</i></strong></div>
+    </div>
+    <p class="note fu">※<span class="tbd">〇〇年〇月</span>現在</p>
+  </div>
+</section>
+
+<!-- 08 FLOW -->
+<section class="sec" id="flow">
+  <div class="wrap split">
+    <div class="sh fu">
+      <p class="sh-no">07 <span>FLOW</span></p>
+      <h2>相談から転職まで、<br>シンプルなステップで。</h2>
+    </div>
+    <div class="flow">
+      <div class="step fu"><b>STEP 01</b><h3>LINEで相談</h3><p>まずはLINEからご連絡ください。転職時期や希望が決まっていなくても問題ありません。</p></div>
+      <div class="step fu"><b>STEP 02</b><h3>キャリアヒアリング</h3><p>現在の仕事、これまでの経験、今後やってみたいことなどを伺います。オンラインでの相談にも対応しています。</p></div>
+      <div class="step fu"><b>STEP 03</b><h3>求人をご紹介</h3><p>ヒアリング内容をもとに、あなたに合う可能性のある求人をご紹介します。興味のある求人がなければ、応募する必要はありません。</p></div>
+      <div class="step fu"><b>STEP 04</b><h3>選考サポート</h3><p>応募書類の準備や面接対策、企業との調整をサポートします。</p></div>
+      <div class="step fu"><b>STEP 05</b><h3>内定・入社</h3><p>条件確認や入社までの手続きについてもサポートします。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 AGENT -->
+<section class="sec sec--bg" id="agent">
+  <div class="wrap split">
+    <div class="sh fu">
+      <p class="sh-no">08 <span>YOUR HEADHUNTER</span></p>
+      <h2>あなたのキャリアを<br>担当するHEADHUNTER</h2>
+    </div>
+    <div class="ag fu">
+      <div class="ag-top">
+        <img class="ag-photo" data-agent="photo" src="images/img-5.webp" alt=""/>
+        <p class="ag-name"><b>担当ヘッドハンター</b><strong data-agent="name">〇〇 〇〇</strong></p>
+      </div>
+      <div class="ag-body">
+        <span class="ag-lb">MESSAGE</span>
+        <p class="ag-msg" data-agent="message">あなたのこれまでの経験や、今の仕事について感じていることを聞いたうえで、一緒にこれからのキャリアを考えます。いきなり転職を勧めることはありません。まずは現在の状況や、これからについて気軽に相談してください。</p>
+        <span class="ag-lb">PROFILE</span>
+        <dl class="ag-prof">
+          <div><dt>得意領域</dt><dd class="tbd" data-agent="specialty">〇〇</dd></div>
+          <div><dt>サポート領域</dt><dd class="tbd" data-agent="support">〇〇</dd></div>
+          <div><dt>経歴</dt><dd class="tbd" data-agent="career">〇〇</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 SAFETY -->
+<section class="sec" id="safety">
+  <div class="wrap split">
+    <div class="sh fu">
+      <p class="sh-no">09 <span>SAFETY</span></p>
+      <h2>キャリアに関わる<br>ことだからこそ、<br>安心できる仕組みを。</h2>
+    </div>
+    <div class="safe">
+      <div class="safe-i fu"><h3>求職者の費用は一切かかりません</h3><p>HEADHUNTERは、採用が決まった企業から紹介料をいただく仕組みです。求職者の方から利用料をいただくことはありません。相談・求人紹介・選考支援まで無料でご利用いただけます。</p></div>
+      <div class="safe-i fu"><h3>許可なく企業へ情報を送りません</h3><p>あなたの了承なく、企業への応募や個人情報の共有を行うことはありません。応募するかどうかは、必ずご本人に判断していただきます。</p></div>
+      <div class="safe-i fu"><h3>現在の勤務先へ知られることはありません</h3><p>転職活動について、現在の勤務先へHEADHUNTERから連絡することはありません。</p></div>
+      <div class="safe-i fu"><h3>転職しないという選択も尊重します</h3><p>相談した結果、「今は転職しない」という選択になっても問題ありません。キャリアについて整理するだけでもご利用いただけます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 FAQ -->
+<section class="sec sec--bg faq" id="faq">
+  <div class="wrap split">
+    <div class="sh fu">
+      <p class="sh-no">10 <span>FAQ</span></p>
+      <h2>よくある質問</h2>
+    </div>
+    <div>
+      <details class="fu"><summary><i>Q</i>まだ転職するか決めていません。それでも相談できますか？<b>+</b></summary>
+        <div class="faq-a"><i>A</i><p>はい。具体的に転職を決める前の情報収集や、キャリアの整理からご相談いただけます。</p></div></details>
+      <details class="fu"><summary><i>Q</i>利用料金はかかりますか？<b>+</b></summary>
+        <div class="faq-a"><i>A</i><p>かかりません。HEADHUNTERは採用企業から紹介料をいただく仕組みのため、求職者の方は無料でご利用いただけます。</p></div></details>
+      <details class="fu"><summary><i>Q</i>求人を紹介されたら応募しなければいけませんか？<b>+</b></summary>
+        <div class="faq-a"><i>A</i><p>いいえ。求人内容を確認したうえで、ご自身が興味を持った場合のみ応募いただきます。応募を強制することはありません。</p></div></details>
+      <details class="fu"><summary><i>Q</i>紹介してくれたヘッドハンターに報酬は発生しますか？<b>+</b></summary>
+        <div class="faq-a"><i>A</i><p>転職が成立した場合、担当ヘッドハンターに所定の報酬が発生します。HEADHUNTERではこの仕組みを隠さずお伝えしています。求職者の方が納得して転職することを前提とした仕組みであり、合わない求人への応募や転職を強制することはありません。</p></div></details>
+      <details class="fu"><summary><i>Q</i>個人情報が勝手に企業へ送られることはありませんか？<b>+</b></summary>
+        <div class="faq-a"><i>A</i><p>ありません。求人への応募や企業への情報共有は、ご本人の意思を確認したうえで行います。</p></div></details>
+      <details class="fu"><summary><i>Q</i>どのような求人がありますか？<b>+</b></summary>
+        <div class="faq-a"><i>A</i><p>取り扱い求人は時期によって異なります。まずはご希望やこれまでの経験を伺ったうえで、ご紹介可能な求人をご案内します。</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 12 CLOSING -->
+<section class="cl" id="closing">
+  <div class="wrap">
+    <h2 class="fu">キャリアの選択肢は、<br>知ってから決めればいい。</h2>
+    <p class="fu">今すぐ転職する必要はありません。<br>今の仕事について考えていること。これからやってみたいこと。<br>自分にはどんな選択肢があるのか。<br>まずは担当ヘッドハンターと話すところから始めてみてください。</p>
+    <a class="btn fu" href="#">LINEでキャリア相談をする</a>
+    <p class="cl-note fu">相談無料｜転職するか未定でもOK</p>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <p class="ft-logo">
+      <svg viewBox="0 0 26 26" width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg>
+      <span>HEADHUNTER</span>
+    </p>
+    <dl>
+      <dt>運営会社</dt><dd>株式会社MEEM</dd>
+      <dt>所在地</dt><dd class="tbd">〇〇</dd>
+      <dt>お問い合わせ</dt><dd class="tbd">〇〇</dd>
+      <dt>許認可</dt><dd>有料職業紹介事業許可番号：26-ユ-300711（厚生労働大臣許可）</dd>
+    </dl>
+    <p class="ft-links">
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">利用規約</a>
+      <a href="#">職業紹介に関する表記</a>
+    </p>
+    <p class="ft-cr">© MEEM Inc.</p>
+  </div>
+</footer>
+
+<div class="fx">
+  <em>相談無料<br>未定でもOK</em>
+  <a class="btn" href="#closing">LINEで相談する</a>
+</div>
+
+<script>
+(function(){
+  var obs = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.fu').forEach(function(el){ obs.observe(el); });
+})();
+
+/* 担当ヘッドハンターの差し込み
+   1) ?agent=<キー>  … 下の AGENTS に定義した内容を反映
+   2) ?name=&message=&specialty=&support=&career=  … 個別に指定（写真は images/ 配下のみ許可） */
+(function(){
+  var AGENTS = {
+    sample: {
+      name: '山田 太郎',
+      photo: 'images/img-5.webp',
+      message: 'これまでのご経験と、今のお仕事で感じていることを伺ったうえで、一緒にこれからのキャリアを考えます。',
+      specialty: 'IT・Web／SaaS',
+      support: '20〜30代の初めての転職',
+      career: '人材紹介会社にて法人営業を担当'
+    }
+  };
+  var q = new URLSearchParams(location.search);
+  var data = Object.assign({}, AGENTS[q.get('agent')] || {});
+  ['name','message','specialty','support','career'].forEach(function(k){
+    if (q.get(k)) data[k] = q.get(k);
+  });
+  var photo = q.get('photo');
+  if (photo && /^images\/[\w.-]+$/.test(photo)) data.photo = photo;
+
+  Object.keys(data).forEach(function(k){
+    document.querySelectorAll('[data-agent="' + k + '"]').forEach(function(el){
+      if (k === 'photo') { el.setAttribute('src', data[k]); return; }
+      el.textContent = data[k];
+      el.classList.remove('tbd');
+    });
+  });
+})();
+</script>
+</body>
+</html>
