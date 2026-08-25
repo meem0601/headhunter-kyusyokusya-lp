@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>HEADHUNTER｜完全紹介制の転職支援</title>
-<meta name="description" content="HEADHUNTERは、ご紹介のある方だけがご利用いただける完全紹介制の転職支援サービスです。審査を通過した公認エージェントが、厚生労働大臣の許可を受けた有料職業紹介事業として支援します。"/>
+<title>HEAD HUNTER｜完全紹介制の転職支援</title>
+<meta name="description" content="HEAD HUNTERは、ご紹介のある方だけがご利用いただける完全紹介制の転職支援サービスです。審査を通過した転職エージェントが、厚生労働大臣の許可を受けた有料職業紹介事業として支援します。"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet"/>
@@ -32,18 +32,12 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 @media (min-width:1120px){
   .stage{display:block;position:fixed;inset:0;z-index:0;background:var(--gray-bg)}
   .stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,110,.06) 1px,transparent 1px);background-size:20px 20px}
-  .side-l,.side-r{display:flex;flex-direction:column;position:fixed;top:50%;transform:translateY(-50%);z-index:2;width:266px}
-  .side-l{left:max(28px,calc(50% - 215px - 296px));gap:20px}
-  .side-r{right:max(28px,calc(50% - 215px - 296px));gap:12px}
+  .side-l,.side-r{display:flex;flex-direction:column;position:fixed;z-index:2;width:266px}
+  .side-l{left:max(28px,calc(50% - 215px - 296px));top:38px;bottom:38px;justify-content:space-between}
   .side-logo{display:flex;align-items:center;gap:9px}
   .side-logo span{font-family:var(--fe);font-size:15px;font-weight:700;letter-spacing:.13em}
-  .side-promo{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:20px 18px}
-  .side-promo small{display:block;font-family:var(--fe);font-size:10.5px;font-weight:700;letter-spacing:.2em;color:var(--blue);margin-bottom:9px}
-  .side-promo strong{display:block;font-size:15.5px;font-weight:900;line-height:1.6}
-  .side-promo .meta{display:flex;gap:6px;margin:13px 0}
-  .side-promo .meta span{flex:1;text-align:center;font-size:10.5px;font-weight:700;color:var(--blue-d);background:var(--tint);border-radius:3px;padding:6px 3px}
-  .side-cta{display:flex;align-items:center;justify-content:space-between;background:var(--blue);color:#fff;font-size:13.5px;font-weight:800;padding:14px 16px;border-radius:6px}
   .side-copy{font-family:var(--fe);font-size:11px;color:var(--mute)}
+  .side-r{right:max(28px,calc(50% - 215px - 296px));top:50%;transform:translateY(-50%);gap:12px}
   .side-menu-t{font-family:var(--fe);font-size:12.5px;font-weight:700;font-style:italic;letter-spacing:.14em;color:var(--blue)}
   .side-r nav{display:flex;flex-direction:column}
   .side-r nav a{display:flex;align-items:center;gap:10px;padding:12px 2px;font-size:13.5px;font-weight:700;border-bottom:1px solid var(--border);transition:color .2s}
@@ -62,21 +56,25 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .head em b{color:var(--text);font-size:12px;margin-left:5px}
 
 /* hero */
-.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:var(--blue);padding:34px var(--page-x) 24px}
+.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:var(--blue);padding:34px var(--page-x) 28px}
 .hero::before{content:"";position:absolute;inset:-38px;z-index:0;opacity:.78;
   background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
   background-size:36px 36px,36px 36px;animation:grid 26s linear infinite}
 @keyframes grid{from{transform:translate(0,0)}to{transform:translate(36px,36px)}}
 .hero::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(122deg,transparent 0 58%,rgba(255,255,255,.09) 58.1%,transparent 58.45% 100%)}
 .hero>*{position:relative;z-index:1}
-.hero-slash{display:flex;align-items:center;justify-content:center;gap:10px;font-size:12.5px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:9px}
-.hero-slash::before,.hero-slash::after{content:"";width:13px;height:15px;border-left:2px solid rgba(255,255,255,.55)}
+.hero-slash{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 16px;
+  background:#fff;border-radius:4px;padding:11px 12px;box-shadow:0 10px 22px rgba(0,0,60,.26)}
+.hero-slash b{font-size:clamp(11.5px,3.2vw,13px);font-weight:900;letter-spacing:.02em;color:var(--blue);
+  background:linear-gradient(transparent 62%,rgba(0,0,212,.16) 62%)}
+.hero-slash i{flex:none;font-style:normal;font-family:var(--fe);font-size:11px;font-weight:700;color:var(--blue-ll)}
+.hero-slash span{font-size:clamp(11.5px,3.2vw,13px);font-weight:900;letter-spacing:-.01em;color:var(--text)}
 .hero-slash::before{transform:rotate(-18deg)}
 .hero-slash::after{transform:rotate(18deg);border-left:0;border-right:2px solid rgba(255,255,255,.55)}
-.hero h1{font-size:clamp(23px,6.4vw,29px);font-weight:900;line-height:1.45;letter-spacing:-.03em;text-align:center}
-.hero h1 em{font-style:normal;border-bottom:4px solid var(--blue-ll);padding-bottom:2px}
-.hero-lead{margin-top:14px;font-size:13px;line-height:1.9;color:rgba(255,255,255,.82);text-align:center}
-.hero-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:26px;margin-bottom:16px}
+.hero h1{font-size:clamp(27px,7.6vw,34px);font-weight:900;line-height:1.58;letter-spacing:-.035em;text-align:center}
+.hero h1 em{font-style:normal;border-bottom:4px solid var(--blue-ll);padding-bottom:5px}
+.hero-lead{margin-top:22px;font-size:13px;line-height:2.15;color:rgba(255,255,255,.8);text-align:center}
+.hero-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:16px;margin-bottom:0}
 .hero-badges span{display:grid;place-items:center;text-align:center;font-size:10.5px;font-weight:700;letter-spacing:-.02em;
   background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.34);border-radius:3px;padding:9px 3px}
 .hero-note{margin-top:10px;font-size:9.5px;line-height:1.7;color:rgba(255,255,255,.6);text-align:center}
@@ -108,6 +106,7 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .sec--blue .sh .mk{background:linear-gradient(transparent 70%,rgba(122,152,255,.42) 70%)}
 .sh p{margin-top:12px;font-size:13px;line-height:1.95;color:var(--sub)}
 .sec--blue .sh p{color:rgba(255,255,255,.8)}
+.closing .sh{margin-bottom:10px}
 .closing .sh h2{color:#fff}
 .closing .sh .eb{color:var(--blue-ll)}
 .closing .sh p{color:rgba(255,255,255,.86)}
@@ -117,8 +116,13 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 
 /* card grids */
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.tile{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:15px 10px;text-align:center}
-.tile i{display:grid;place-items:center;width:30px;height:30px;margin:0 auto 9px;border-radius:3px;background:var(--tint);color:var(--blue);font-family:var(--fe);font-style:normal;font-size:12px;font-weight:700}
+.tile{position:relative;background:var(--white);border:1px solid var(--border);border-radius:9px;
+  padding:17px 10px 15px;text-align:center;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,border-color .25s}
+.tile:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,80,.10);border-color:rgba(0,0,212,.28)}
+.tile b{position:absolute;left:11px;top:9px;font-family:var(--fe);font-size:10px;font-weight:700;color:rgba(0,0,212,.32)}
+.tile i{display:grid;place-items:center;width:38px;height:38px;margin:0 auto 11px;border-radius:10px;
+  background:linear-gradient(150deg,var(--tint),#E4E8FF);color:var(--blue)}
+.tile i svg{width:20px;height:20px}
 .tile strong{display:block;font-size:14px;font-weight:900;line-height:1.5}
 .tile span{display:block;margin-top:5px;font-size:11px;line-height:1.6;letter-spacing:-.01em;color:var(--sub);white-space:nowrap}
 
@@ -126,12 +130,15 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .chips span{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:9px 13px;font-size:12.5px;font-weight:700}
 .sec--tint .chips span{background:var(--white)}
 
-/* numbered list */
-.nlist{border-top:1px solid var(--border)}
-.nrow{display:grid;grid-template-columns:38px 1fr;gap:0 12px;padding:16px 0;border-bottom:1px solid var(--border)}
-.nrow b{font-family:var(--fe);font-size:13px;font-weight:700;color:var(--blue);padding-top:2px}
-.nrow strong{display:block;font-size:15px;font-weight:900;line-height:1.55}
-.nrow span{display:block;margin-top:3px;font-size:12.5px;line-height:1.8;color:var(--sub)}
+.nlist{display:flex;flex-direction:column;gap:9px}
+.nrow{display:grid;grid-template-columns:auto 1fr;gap:0 15px;align-items:baseline;
+  background:var(--white);border:1px solid var(--border);border-left:3px solid var(--blue);
+  border-radius:10px;padding:18px 18px 17px;
+  transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s,border-color .28s}
+.nrow:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,0,80,.10);border-color:rgba(0,0,212,.26)}
+.nno{font-family:var(--fe);font-size:22px;font-weight:700;line-height:1;letter-spacing:-.04em;color:var(--blue)}
+.nrow strong{display:block;font-size:15.5px;font-weight:900;line-height:1.5;letter-spacing:-.02em}
+.nrow>div>span{display:block;margin-top:5px;font-size:12.5px;line-height:1.8;color:var(--sub)}
 
 .tbd{border-bottom:1px dotted #C9C5C0}
 
@@ -190,7 +197,11 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
   background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
   background-size:36px 36px,36px 36px;animation:grid 26s linear infinite}
 .closing>*{position:relative;z-index:1}
-.cl-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:12px}
+.cl-guide{display:inline-block;margin-top:6px;padding:15px 22px;line-height:1.8;border-radius:6px;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.4);
+  font-size:clamp(13.5px,3.8vw,15px);font-weight:800;letter-spacing:-.01em;color:#fff}
+.cl-guide b{background:linear-gradient(transparent 66%,rgba(122,152,255,.55) 66%)}
+.cl-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:20px}
 .cl-chips span{font-size:11px;font-weight:700;color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.32);border-radius:3px;padding:6px 11px}
 
 /* footer */
@@ -201,6 +212,8 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .foot dt{font-weight:700;color:rgba(255,255,255,.85);white-space:nowrap}
 .foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;margin-bottom:12px}
 .foot-links a{color:rgba(255,255,255,.8)}
+.foot small{display:block;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);
+  text-align:left;font-size:10px;line-height:1.9;color:rgba(255,255,255,.45)}
 .foot .cr{margin-top:12px;font-family:var(--fe);font-size:10px;color:rgba(255,255,255,.4)}
 
 .fx{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:80;width:min(var(--lp-w),100%);
@@ -217,7 +230,7 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 
 
 
-.hero-hh{margin-top:16px}
+.hero-hh{margin-top:22px}
 
 
 
@@ -226,35 +239,42 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 /* ============ NETWORK ============ */
 
 
-.ncomp{display:flex;flex-wrap:wrap;justify-content:center;gap:7px}
-.ncomp span{display:inline-flex;align-items:center;gap:7px;border-radius:99px;padding:9px 14px 9px 11px;
-  font-size:11.5px;font-weight:800;letter-spacing:-.02em;
+.ncomp{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.ncomp span{display:flex;align-items:center;justify-content:center;gap:5px;border-radius:99px;padding:10px 6px;
+  font-size:11px;font-weight:800;letter-spacing:-.04em;white-space:nowrap;
   background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.28);
   transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .25s}
-.ncomp span::before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:var(--blue-ll);
+.ncomp span::before{content:"";flex:none;width:4px;height:4px;border-radius:50%;background:var(--blue-ll);
   box-shadow:0 0 6px rgba(150,180,255,.9)}
 .ncomp span:hover{transform:translateY(-3px);background:rgba(255,255,255,.2)}
 .ncomp-n{margin-top:14px;text-align:center;font-size:11.5px;line-height:1.8;color:rgba(255,255,255,.8)}
 .ncomp-n b{color:#fff;background:linear-gradient(transparent 64%,rgba(122,152,255,.55) 64%)}
 
 
-.nadv{position:relative;margin-top:26px;border-radius:12px;padding:18px 16px 18px;text-align:center;
-  background:linear-gradient(150deg,rgba(255,255,255,.17),rgba(255,255,255,.07));
-  border:1px solid rgba(255,255,255,.34);box-shadow:0 14px 30px rgba(0,0,60,.22)}
-.nadv-l{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--blue-d);
-  background:#fff;border-radius:99px;padding:4px 14px;margin-bottom:14px}
-.nadv-row{display:flex;align-items:stretch;justify-content:center;gap:10px}
+.nadv{position:relative;margin-top:22px;border-radius:12px;padding:20px 16px;text-align:center;
+  background:var(--white);border:1px solid var(--border);box-shadow:0 12px 26px rgba(0,0,80,.08)}
+.nadv-l{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.08em;color:#fff;
+  background:var(--blue);border-radius:99px;padding:5px 15px;margin-bottom:15px}
+.nadv-row{display:flex;align-items:stretch;justify-content:center;gap:11px}
 .nadv-c{flex:1;max-width:132px;display:flex;flex-direction:column;justify-content:center;
-  border-radius:9px;padding:13px 6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.34)}
+  border-radius:10px;padding:14px 6px;background:var(--gray-bg);border:1px solid var(--border)}
 .nadv-c span{display:block;font-family:var(--fe);font-size:8.5px;font-weight:700;letter-spacing:.16em;
-  color:var(--blue-ll);margin-bottom:6px}
-.nadv-c b{font-size:12.5px;font-weight:900;line-height:1.5;letter-spacing:-.02em}
-.nadv-c--a{background:#fff;border-color:#fff}
-.nadv-c--a span{color:var(--blue)}
-.nadv-c--a b{color:var(--blue-d)}
-.nadv-row i{align-self:center;font-style:normal;font-size:17px;font-weight:700;flex:none}
-.nadv p{margin-top:14px;font-size:11.5px;line-height:1.85;color:rgba(255,255,255,.84)}
-.nadv p b{color:#fff;background:linear-gradient(transparent 64%,rgba(122,152,255,.55) 64%)}
+  color:var(--mute);margin-bottom:6px}
+.nadv-c b{font-size:12.5px;font-weight:900;line-height:1.5;letter-spacing:-.02em;color:var(--text)}
+.nadv-c--a{background:linear-gradient(150deg,var(--blue),#1B2CF0);border-color:var(--blue);
+  box-shadow:0 8px 18px rgba(0,0,120,.22)}
+.nadv-c--a span{color:rgba(255,255,255,.82)}
+.nadv-c--a b{color:#fff}
+.nadv-row i{align-self:center;font-style:normal;font-size:17px;font-weight:700;color:var(--blue);flex:none}
+.nadv p{margin-top:15px;font-size:11.5px;line-height:1.85;color:var(--sub)}
+.nadv p b{color:var(--text);background:linear-gradient(transparent 64%,rgba(0,0,212,.20) 64%)}
+
+
+.ni-note{display:flex;align-items:center;gap:11px;margin-top:10px;border-radius:9px;padding:13px 14px;
+  background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.32)}
+.ni-note b{flex:none;font-size:10.5px;font-weight:900;letter-spacing:-.02em;color:var(--blue-d);
+  background:#fff;border-radius:99px;padding:5px 11px;box-shadow:0 4px 10px rgba(0,0,60,.2)}
+.ni-note span{font-size:11.5px;font-weight:700;line-height:1.7;letter-spacing:-.02em}
 
 /* ---- NETWORK 背景演出 ---- */
 @keyframes netDash{to{stroke-dashoffset:-260}}
@@ -288,18 +308,15 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
   .net-fx i,.nlink polyline,.nlink circle{animation:none!important}
 }
 
-.nmain{position:relative;overflow:hidden;text-align:center;border-radius:10px;padding:16px 16px 14px;
-  background:linear-gradient(150deg,rgba(255,255,255,.16),rgba(255,255,255,.06));
-  border:1px solid rgba(255,255,255,.34);box-shadow:0 14px 30px rgba(0,0,60,.22)}
-.nmain::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.6;
-  background-image:repeating-linear-gradient(116deg,transparent 0 30px,rgba(255,255,255,.06) 30px 31.5px)}
-.nmain>*{position:relative}
-.nmain-l{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;
-  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:3px;padding:4px 11px}
-.nmain-v{display:flex;align-items:baseline;justify-content:center;gap:5px;margin:7px 0 4px}
-.nmain-v b{font-family:var(--fe);font-size:clamp(38px,10.5vw,48px);font-weight:700;line-height:1;letter-spacing:-.02em}
-.nmain-v i{font-style:normal;font-size:15px;font-weight:800}
-.nmain-s{font-size:10.5px;color:rgba(255,255,255,.7)}
+.nmain{position:relative;text-align:center;padding:4px 0 2px}
+.nmain-l{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;letter-spacing:.04em;
+  color:rgba(255,255,255,.9)}
+.nmain-l::before,.nmain-l::after{content:"";width:16px;height:2px;background:var(--blue-ll)}
+.nmain-v{display:flex;align-items:baseline;justify-content:center;gap:4px;margin:8px 0 6px}
+.nmain-v b{font-family:var(--fe);font-size:clamp(58px,17vw,74px);font-weight:700;line-height:.95;
+  letter-spacing:-.04em;text-shadow:0 8px 24px rgba(0,0,60,.35)}
+.nmain-v i{font-style:normal;font-size:clamp(18px,5vw,22px);font-weight:900;letter-spacing:-.02em}
+.nmain-s{font-size:11px;color:rgba(255,255,255,.68)}
 .nsub{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
 .nsub div{text-align:center;border-radius:8px;padding:14px 6px;
   background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.26)}
@@ -324,43 +341,60 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
   mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
 .jslide-track{display:flex;align-items:stretch;width:max-content;animation:jslide 62s linear infinite}
 @keyframes jslide{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
-.jc{flex:0 0 344px;margin-right:9px;background:var(--white);border-radius:8px;
-  padding:12px 14px 11px;box-shadow:0 10px 22px rgba(0,0,60,.22)}
-.jc-h{display:flex;align-items:center;gap:9px;min-width:0}
-.jc-tag{flex:none;font-size:9.5px;font-weight:800;letter-spacing:-.01em;color:var(--blue-d);
-  background:var(--tint);border-radius:3px;padding:4px 8px}
-.jc-h strong{flex:1;min-width:0;font-size:13.5px;font-weight:900;color:var(--text);letter-spacing:-.02em;
+.jc{flex:0 0 248px;min-width:0;max-width:248px;margin-right:8px;background:var(--white);border-radius:8px;
+  padding:11px 12px 10px;box-shadow:0 10px 22px rgba(0,0,60,.22)}
+.jc-h{display:flex;align-items:center;gap:10px;min-width:0}
+.jc-i{flex:1;min-width:0;display:flex;align-items:center;gap:9px}
+.jc-ph{flex:none;width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:top center;
+  background:var(--tint);border:2px solid #fff;box-shadow:0 3px 9px rgba(0,0,60,.16)}
+.jc-tag{flex:none;font-size:9px;font-weight:800;letter-spacing:-.02em;color:var(--blue-d);
+  background:var(--tint);border-radius:3px;padding:3px 6px}
+.jc-i strong{flex:1;min-width:0;font-size:12px;font-weight:900;color:var(--text);letter-spacing:-.02em;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.jc-no{flex:none;font-family:var(--fe);font-size:9px;font-weight:600;color:#B5AFAA}
-.jc-b{display:flex;align-items:center;gap:14px;margin-top:8px;padding-bottom:9px;border-bottom:1px dashed var(--border)}
-.jc-sal{flex:none;display:flex;align-items:baseline;gap:3px}
-.jc-sal i{font-style:normal;font-size:9.5px;font-weight:800;color:var(--sub)}
-.jc-sal b{font-family:var(--fe);font-size:19px;font-weight:700;line-height:1.1;color:var(--blue)}
-.jc-sal em{font-style:normal;font-size:10.5px;font-weight:800;color:var(--blue)}
-.jc-m{display:flex;gap:10px;min-width:0}
+.jc-b{display:flex;align-items:center;gap:8px;min-width:0;margin-top:7px;padding-bottom:8px;border-bottom:1px dashed var(--border)}
+.jc-sal{flex:none;display:flex;align-items:baseline;gap:2px}
+.jc-sal i{font-style:normal;font-size:9px;font-weight:800;color:var(--sub)}
+.jc-sal b{font-family:var(--fe);font-size:16px;font-weight:700;line-height:1.1;color:var(--blue)}
+.jc-sal em{font-style:normal;font-size:9.5px;font-weight:800;color:var(--blue)}
+.jc-m{display:flex;gap:7px;min-width:0}
 .jc-m div{display:flex;align-items:center;gap:5px;min-width:0}
-.jc-m dt{flex:none;font-size:8.5px;font-weight:700;color:#fff;background:#B5AFAA;border-radius:2px;padding:2px 4px}
-.jc-m dd{font-size:10.5px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.jc-f{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px;min-width:0}
+.jc-m dt{flex:none;font-size:8px;font-weight:700;color:#fff;background:#B5AFAA;border-radius:2px;padding:2px 3px}
+.jc-m dd{font-size:10px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jc-f{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px;min-width:0}
 .jc-tags{display:flex;gap:4px;flex:none}
-.jc-tags span{font-size:9px;font-weight:700;color:var(--blue-d);border:1px solid rgba(0,0,212,.24);
-  border-radius:99px;padding:3px 7px;white-space:nowrap}
-.jc-co{font-size:10px;font-weight:700;color:var(--sub);letter-spacing:-.03em;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:right}
+.jc-tags span{font-size:8.5px;font-weight:700;color:var(--blue-d);border:1px solid rgba(0,0,212,.24);
+  border-radius:99px;padding:3px 6px;white-space:nowrap}
+.jc-co{display:flex;align-items:baseline;gap:5px;justify-content:flex-end;min-width:0;
+  font-size:9.5px;font-weight:700;color:var(--sub);letter-spacing:-.03em;white-space:nowrap}
+.jc-co i{flex:none;font-style:normal;font-family:var(--fe);font-size:8.5px;font-weight:600;color:#C0BAB5}
 .jslide-n{margin-top:12px;text-align:center;font-size:10px;color:rgba(255,255,255,.6)}
 @media (prefers-reduced-motion:reduce){.jslide-track{animation:none}.jslide{overflow-x:auto}}
 
 
-.nsal{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding-top:16px}
-.nsal-scale{position:absolute;left:2px;right:2px;top:0;height:6px;border-radius:99px;
-  background:linear-gradient(90deg,rgba(255,255,255,.28),rgba(255,255,255,.62) 55%,#fff);
-  display:flex;align-items:center;justify-content:space-between;padding:0 3px}
-.nsal-scale i{width:4px;height:4px;border-radius:50%;background:var(--blue)}
-.nsal span{text-align:center;border-radius:6px;padding:11px 2px;font-size:11.5px;font-weight:800;letter-spacing:-.03em;
-  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.26);
-  transition:transform .25s cubic-bezier(.34,1.56,.64,1),background .25s}
-.nsal span:hover{transform:translateY(-3px);background:rgba(255,255,255,.2)}
-.nsal span:nth-child(n+7){background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.42)}
+.nsal{position:relative;padding-top:26px}
+.nsal-cap{position:absolute;left:12.5%;width:50%;top:0;text-align:center}
+.nsal-cap b{position:relative;display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:-.02em;
+  color:var(--blue-d);background:#fff;border-radius:99px;padding:3px 12px}
+.nsal-cap::after{content:"";position:absolute;left:6px;right:6px;top:24px;height:7px;
+  border:1px solid rgba(255,255,255,.5);border-bottom:0;border-radius:4px 4px 0 0}
+.nsal-g{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;align-items:end;height:132px;padding-top:12px}
+.nb{display:flex;flex-direction:column;justify-content:flex-end;height:100%;border-radius:7px 7px 0 0;
+  transition:background .25s}
+.nb--on{background:rgba(255,255,255,.11)}
+.nb i{display:block;height:var(--h);border-radius:5px 5px 0 0;
+  background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.16));
+  transform-origin:bottom;transform:scaleY(0);transition:transform .9s cubic-bezier(.16,1,.3,1)}
+.nb--on i{background:linear-gradient(180deg,#fff,#B9C6FF)}
+.nsal.in .nb i{transform:scaleY(1)}
+html:not(.js) .nb i{transform:scaleY(1)}
+.nb:nth-child(2) i{transition-delay:.06s}.nb:nth-child(3) i{transition-delay:.12s}
+.nb:nth-child(4) i{transition-delay:.18s}.nb:nth-child(5) i{transition-delay:.24s}
+.nb:nth-child(6) i{transition-delay:.3s}.nb:nth-child(7) i{transition-delay:.36s}
+.nb:nth-child(8) i{transition-delay:.42s}
+.nb span{display:block;margin-top:7px;text-align:center;font-size:9px;font-weight:800;letter-spacing:-.05em;
+  color:rgba(255,255,255,.72)}
+.nb--on span{color:#fff}
+.nsal-unit{margin-top:2px;text-align:right;font-size:9.5px;color:rgba(255,255,255,.55)}
 .nsal-n{margin-top:14px;text-align:center;font-size:11.5px;line-height:1.85;color:rgba(255,255,255,.8)}
 .nsal-n b{color:#fff;background:linear-gradient(transparent 64%,rgba(122,152,255,.55) 64%)}
 
@@ -371,7 +405,7 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .wb:last-child{margin-bottom:0}
 .wb b{position:absolute;left:12px;top:-13px;background:var(--blue);color:#fff;
   font-size:11px;font-weight:800;letter-spacing:.02em;padding:5px 12px;border-radius:3px}
-.wb p{font-size:15.5px;font-weight:600;line-height:2;color:var(--text);letter-spacing:-.01em}
+.wb p{font-size:16.5px;font-weight:600;line-height:1.95;color:var(--text);letter-spacing:-.02em}
 .wb em{font-style:normal;font-weight:900;background:linear-gradient(transparent 64%,rgba(0,0,212,.20) 64%)}
 .wb::after{content:"";position:absolute;left:46px;bottom:-12px;width:20px;height:20px;
   background:var(--gray-bg);border-left:2px solid var(--blue);border-bottom:2px solid var(--blue);
@@ -416,17 +450,27 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .ic--b strong{color:#fff}
 .ic-row i{align-self:center;font-style:normal;font-size:20px;font-weight:700;color:var(--blue);flex:none}
 
+.intro-spec{list-style:none;margin-top:28px;text-align:left;background:var(--gray-bg);
+  border:1px solid var(--border);border-radius:10px;padding:16px 17px}
+.intro-spec li{position:relative;padding-left:25px;font-size:12.5px;font-weight:700;line-height:1.75;
+  letter-spacing:-.01em;color:var(--text)}
+.intro-spec li+li{margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+.intro-spec li::before{content:"✓";position:absolute;left:0;top:.15em;display:grid;place-items:center;
+  width:17px;height:17px;border-radius:50%;background:var(--blue);color:#fff;font-size:9.5px;font-weight:900}
+.intro-spec li+li::before{top:calc(.15em + 10px)}
+.intro-spec b{color:var(--blue-d);background:linear-gradient(transparent 66%,rgba(0,0,212,.16) 66%)}
+
 /* ============ メディア掲載 ============ */
-.media{padding:30px var(--page-x) 30px;background:var(--white);border-bottom:1px solid var(--border)}
+.media{padding:20px var(--page-x) 20px;background:var(--white);border-bottom:1px solid var(--border)}
 .media-t{display:flex;align-items:center;justify-content:center;gap:10px;
-  text-align:center;font-size:13px;font-weight:800;line-height:1.85;margin-bottom:16px}
+  text-align:center;font-size:12.5px;font-weight:800;line-height:1.6;margin-bottom:11px}
 .media-t::before,.media-t::after{content:"";flex:none;width:16px;height:2px;background:var(--blue)}
 .media-t b{color:var(--blue-d);background:linear-gradient(transparent 66%,rgba(0,0,212,.20) 66%)}
 .media-wrap{overflow:hidden;margin-inline:calc(var(--page-x)*-1);
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
   mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .media-track{display:flex;width:max-content;animation:mediaSlide 28s linear infinite}
-.media-track img{height:52px;width:auto;max-width:none}
+.media-track img{height:62px;width:auto;max-width:none}
 @keyframes mediaSlide{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 .media-wrap:hover .media-track{animation-play-state:paused}
 @media (prefers-reduced-motion:reduce){.media-track{animation:none}}
@@ -451,14 +495,14 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .ab-c{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:auto 1fr;
   gap:0 15px;align-items:center;background:var(--white);border:1px solid var(--border);border-radius:10px;
   padding:17px 18px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,border-color .3s}
-.ab-c::before{content:"";position:absolute;right:-40px;top:-40px;z-index:0;width:130px;height:130px;border-radius:50%;
-  background:radial-gradient(circle,rgba(0,0,212,.10),transparent 70%);transition:transform .55s}
+.ab-c::before{content:"";position:absolute;right:0;top:0;z-index:0;width:86px;height:86px;pointer-events:none;
+  background-image:repeating-linear-gradient(122deg,transparent 0 9px,rgba(0,0,212,.07) 9px 10px);
+  -webkit-mask-image:linear-gradient(225deg,#000,transparent 72%);mask-image:linear-gradient(225deg,#000,transparent 72%)}
 .ab-c::after{content:"";position:absolute;left:0;top:0;z-index:1;width:3px;height:100%;
   background:linear-gradient(180deg,var(--blue),var(--blue-ll));transform:scaleY(0);transform-origin:top;
   transition:transform .6s cubic-bezier(.16,1,.3,1)}
 .ab-c.in::after{transform:scaleY(1)}
 .ab-c:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,0,80,.13);border-color:rgba(0,0,212,.3)}
-.ab-c:hover::before{transform:scale(1.4)}
 .ab-c>*{position:relative;z-index:2}
 .ab-n{font-family:var(--fe);font-size:38px;font-weight:700;line-height:1;letter-spacing:-.04em;
   color:transparent;-webkit-text-stroke:1.6px rgba(0,0,212,.32)}
@@ -470,20 +514,31 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
   border-left:2px solid var(--blue-ll);font-size:11.5px;font-weight:700;line-height:1.7;color:var(--sub)}
 .ab-q::before{content:"“";margin-right:2px;color:var(--blue-ll);font-weight:900}
 .ab-q::after{content:"”";margin-left:2px;color:var(--blue-ll);font-weight:900}
-.ab-flow{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:26px}
-.ab-flow span{position:relative;flex:1;max-width:106px;text-align:center;
-  font-size:13px;font-weight:900;letter-spacing:-.02em;color:var(--blue-d);
-  background:linear-gradient(150deg,var(--tint),#F5F6FF);border:1px solid rgba(0,0,212,.20);
-  border-radius:9px;padding:13px 4px;box-shadow:0 6px 14px rgba(0,0,120,.07);
-  transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
-.ab-flow span:hover{transform:translateY(-3px)}
-.ab-flow span::before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;
-  border-radius:9px 9px 0 0;background:linear-gradient(90deg,var(--blue),var(--blue-ll))}
-.ab-flow i{flex:none;font-style:normal;font-family:var(--fe);font-size:15px;font-weight:700;color:var(--blue-ll)}
-.ab-sum{position:relative;margin-top:22px;padding:24px 18px;text-align:center;border-radius:10px;
-  background:linear-gradient(135deg,var(--tint),#F6F5FF);border:1px solid rgba(0,0,212,.16);
-  font-size:14.5px;font-weight:800;line-height:1.9}
-.ab-sum b{background:linear-gradient(transparent 66%,rgba(0,0,212,.22) 66%)}
+.ab-flow{position:relative;display:flex;align-items:stretch;justify-content:center;gap:0;margin-top:30px}
+.afs{position:relative;flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:8px;
+  padding:16px 6px 15px;background:var(--white);border:1px solid var(--border);
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,border-color .3s}
+.afs:first-of-type{border-radius:10px 0 0 10px}
+.afs:last-of-type{border-radius:0 10px 10px 0}
+.afs::before{content:"";width:28px;height:28px;border-radius:50%;
+  background:linear-gradient(150deg,var(--blue),var(--blue-ll));box-shadow:0 4px 10px rgba(0,0,212,.28)}
+.afs::after{content:attr(data-n);position:absolute;top:16px;left:50%;transform:translateX(-50%);
+  font-family:var(--fe);font-size:11.5px;font-weight:700;color:#fff;line-height:28px}
+.afs b{font-size:14px;font-weight:900;letter-spacing:-.02em;color:var(--ink,#0C1024)}
+.afs span{font-size:10px;font-weight:700;line-height:1.55;color:var(--sub);text-align:center;letter-spacing:-.03em}
+.afs:hover{transform:translateY(-4px);box-shadow:0 14px 26px rgba(0,0,80,.12);border-color:rgba(0,0,212,.3);z-index:2}
+.ab-flow i{position:relative;z-index:1;align-self:center;flex:none;display:grid;place-items:center;
+  width:22px;height:22px;margin-inline:-11px;border-radius:50%;background:#fff;border:1px solid var(--border);
+  font-style:normal;font-family:var(--fe);font-size:11px;font-weight:700;color:var(--blue)}
+.ab-sum{position:relative;isolation:isolate;overflow:hidden;margin-top:24px;padding:26px 20px;text-align:center;
+  border-radius:12px;background:linear-gradient(135deg,#0C1024,#141A3E 60%,#1B2258);color:#fff;
+  font-size:15px;font-weight:800;line-height:1.95;box-shadow:0 16px 34px rgba(0,0,60,.22)}
+.ab-sum::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.7;
+  background-image:repeating-linear-gradient(118deg,transparent 0 26px,rgba(160,180,255,.07) 26px 27.5px)}
+.ab-sum::after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:76px;height:3px;
+  border-radius:0 0 3px 3px;background:linear-gradient(90deg,var(--blue-ll),#fff)}
+.ab-sum span{position:relative;z-index:1;display:block}
+.ab-sum b{color:#fff;background:linear-gradient(transparent 64%,rgba(122,152,255,.5) 64%)}
 
 /* ============ 在籍ヘッドハンター ============ */
 .hh-row{overflow:hidden;margin-inline:calc(var(--page-x)*-1);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
@@ -615,20 +670,10 @@ html:not(.js) .steps::before{transform:scaleY(1)}
   <span class="sq s1"></span><span class="sq s2"></span>
 </div>
 
-<aside class="side-l" aria-label="サービスのご案内">
-  <p class="side-logo"><svg viewBox="0 0 26 26" width="22" height="22" fill="#1E1919" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEADHUNTER</span></p>
-  <div class="side-promo">
-    <small>
-      ※本ページに掲載している人物写真は、AIで生成したイメージです。<br>
-      ※エージェントの経歴・掲載求人はいずれも一例であり、実在の個人・求人を示すものではありません。<br>
-      ※取り扱い求人および紹介可能な求人数は、時期・ご経歴・求人企業の採用状況により異なります。<br>
-      ※対応業種は主なものを掲載しています。記載のない業種もご相談いただけます。<br>
-      ※掲載内容は一般的なサービス内容と手続きの流れです。実際の対応方法、選考条件は個別に異なります。
-    </small>
-    <strong>完全紹介制の<br>転職支援。</strong>
-    <div class="meta"><span>紹介制</span><span>全国対応</span></div>
-  </div>
-  <p class="side-copy">有料職業紹介事業<br>厚生労働大臣許可 26-ユ-300711</p>
+
+<aside class="side-l" aria-hidden="true">
+  <p class="side-logo"><svg viewBox="0 0 26 26" width="22" height="22" fill="#1E1919" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEAD HUNTER</span></p>
+  <p class="side-copy">© HEAD HUNTER</p>
 </aside>
 
 <aside class="side-r" aria-label="ページメニュー">
@@ -650,7 +695,7 @@ html:not(.js) .steps::before{transform:scaleY(1)}
 <div class="col">
 
   <header class="head">
-    <p class="head-l"><svg viewBox="0 0 26 26" width="20" height="20" fill="#1E1919" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEADHUNTER</span></p>
+    <p class="head-l"><svg viewBox="0 0 26 26" width="20" height="20" fill="#1E1919" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEAD HUNTER</span></p>
   </header>
 
   <!-- HERO -->
@@ -659,14 +704,11 @@ html:not(.js) .steps::before{transform:scaleY(1)}
       <i class="b1"></i><i class="b2"></i><i class="g1"></i><i class="g2s"></i>
       <i class="p p1"></i><i class="p p2"></i><i class="p p3"></i><i class="p p4"></i><i class="p p5"></i>
     </div>
-    <p class="hero-slash">完全紹介制</p>
-    <h1>紹介でつながるから、<br><em>本音</em>でキャリア相談できる。</h1>
-    <p class="hero-lead">厳しい審査を通過した公認エージェントが、<br>相談から入社まで一貫サポート。</p>
+    <p class="hero-slash"><b>完全紹介制</b><i>×</i><span>パーソナル転職支援サービス</span></p>
+    <h1>紹介だから、<em>本音</em>で<br>キャリア相談できる。</h1>
+    <p class="hero-lead">厳しい審査を通過した転職エージェントが、<br>相談から入社まで一貫サポート。</p>
 
 
-    <div class="hero-badges">
-      <span>全国対応</span><span>オンライン対応</span><span>完全無料</span>
-    </div>
 
       <div class="hero-hh fu">
         <div class="hh-row">
@@ -702,6 +744,9 @@ html:not(.js) .steps::before{transform:scaleY(1)}
           </div>
         </div>
       </div>
+    <div class="hero-badges">
+      <span>全国対応</span><span>オンライン対応</span><span>完全無料</span>
+    </div>
 
   </section>
 
@@ -730,7 +775,7 @@ html:not(.js) .steps::before{transform:scaleY(1)}
     </div>
     <div class="wsum fu">
       <span>その悩み、すべて</span>
-      <strong><i>HEADHUNTER</i>が</strong>
+      <strong><i>HEAD HUNTER</i>が</strong>
       <strong class="u">解決します。</strong>
     </div>
   </section>
@@ -741,9 +786,14 @@ html:not(.js) .steps::before{transform:scaleY(1)}
     <div class="intro-in">
       <span class="intro-rule fu" aria-hidden="true"></span>
       <h2 class="fu">紹介制のパーソナル<br><span class="hl">転職エージェント。</span></h2>
-      <p class="fu">HEADHUNTERは、<br><b>紹介がある人だけ</b>が使える<br>転職エージェント。</p>
-      <p class="fu">厳しい審査を通過した公認エージェントが、<br><b>最初から最後まで専任</b>で伴走。</p>
-      <p class="fu">転職を決めていなくてもいい。<br>まずは<b>相談から</b>。</p>
+      <p class="fu">紹介がある方だけの、<b>クローズドな転職支援</b>。<br>だから、はじめから安心して話せる。</p>
+      <p class="fu">担当は最初から最後まで一人。<br>経歴も価値観も踏まえた、<b>あなた専用の提案</b>を。</p>
+      <ul class="intro-spec fu">
+        <li>紹介のある方だけが利用できる<b>完全紹介制</b></li>
+        <li>厳しい審査を通過したエージェントが<b>専任で担当</b></li>
+        <li>求人紹介から入社まで一貫してサポート</li>
+        <li><b>利用料は無料</b>。転職の意思が固まっていない段階から相談できる</li>
+      </ul>
       <div class="ic-row fu">
         <div class="ic"><span>REFERRAL</span><strong>完全紹介制</strong></div>
         <i>×</i>
@@ -777,123 +827,121 @@ html:not(.js) .steps::before{transform:scaleY(1)}
       <p class="nmain-v"><b>10</b><i>万件以上</i></p>
       <span class="nmain-s">提携求人データベースを含む</span>
     </div>
-    <p class="nind-t">取り扱い企業</p>
-    <div class="ncomp fu">
-      <span>東証プライム上場</span>
-      <span>大手グループ</span>
-      <span>メガベンチャー</span>
-      <span>シリーズA〜Cスタートアップ</span>
-      <span>外資系</span>
-      <span>老舗メーカー</span>
-      <span>業界シェア上位</span>
-      <span>地域No.1企業</span>
-      <span>非公開ポジション</span>
-    </div>
-    <p class="ncomp-n fu">上場企業から成長スタートアップまで、<b>規模・フェーズを問わず</b>。</p>
-
     <div class="jslide fu">
       <div class="jslide-track">
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">IT・Web</span><strong>プロダクトマネージャー</strong><span class="jc-no">No.0017</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>700〜1,000</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>リモート可</span><span>裁量労働</span></div><span class="jc-co">東証プライム上場 SaaS</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">IT・Web</span><strong>プロダクトマネージャー</strong></div><img class="jc-ph" src="images/job-it.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>700〜1,000</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>リモート可</span><span>裁量労働</span></div><span class="jc-co">東証プライム上場 SaaS<i>No.0017</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">営業</span><strong>法人営業（新規開拓）</strong><span class="jc-no">No.0034</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>450〜700</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京・大阪</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>インセンティブ</span><span>未経験歓迎</span></div><span class="jc-co">メガベンチャー</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">営業</span><strong>法人営業（新規開拓）</strong></div><img class="jc-ph" src="images/job-sales.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>450〜700</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京・大阪</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>インセンティブ</span><span>未経験歓迎</span></div><span class="jc-co">メガベンチャー<i>No.0034</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">建設・不動産</span><strong>施工管理</strong><span class="jc-no">No.0051</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜800</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>資格取得支援</span><span>転勤相談可</span></div><span class="jc-co">業界シェア上位</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">建設・不動産</span><strong>施工管理</strong></div><img class="jc-ph" src="images/job-const.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜800</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>資格取得支援</span><span>転勤相談可</span></div><span class="jc-co">業界シェア上位<i>No.0051</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">製造・工場</span><strong>生産管理</strong><span class="jc-no">No.0068</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>400〜600</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>愛知</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>年休125日</span></div><span class="jc-co">老舗メーカー</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">製造・工場</span><strong>生産管理</strong></div><img class="jc-ph" src="images/job-factory.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>400〜600</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>愛知</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>年休125日</span></div><span class="jc-co">老舗メーカー<i>No.0068</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">医療・介護</span><strong>サービス提供責任者</strong><span class="jc-no">No.0085</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜450</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>神奈川</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>賞与年2回</span><span>資格活かせる</span></div><span class="jc-co">地域の優良企業</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">医療・介護</span><strong>サービス提供責任者</strong></div><img class="jc-ph" src="images/job-care.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜450</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>神奈川</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>賞与年2回</span><span>資格活かせる</span></div><span class="jc-co">地域の優良企業<i>No.0085</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">物流・運輸</span><strong>ドライバー</strong><span class="jc-no">No.0102</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>300〜420</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>埼玉</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>未経験歓迎</span><span>面接1回</span></div><span class="jc-co">地場物流会社</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">物流・運輸</span><strong>ドライバー</strong></div><img class="jc-ph" src="images/job-logi.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>300〜420</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>埼玉</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>未経験歓迎</span><span>面接1回</span></div><span class="jc-co">地場物流会社<i>No.0102</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">管理部門</span><strong>経理（マネージャー候補）</strong><span class="jc-no">No.0119</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜750</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>在宅併用</span><span>フレックス</span></div><span class="jc-co">上場グループ</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">管理部門</span><strong>経理（マネージャー候補）</strong></div><img class="jc-ph" src="images/job-office.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜750</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>在宅併用</span><span>フレックス</span></div><span class="jc-co">上場グループ<i>No.0119</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">IT・Web</span><strong>Webエンジニア</strong><span class="jc-no">No.0136</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>550〜850</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>フルリモート</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>副業可</span><span>服装自由</span></div><span class="jc-co">シリーズB スタートアップ</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">IT・Web</span><strong>Webエンジニア</strong></div><img class="jc-ph" src="images/job-it.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>550〜850</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>フルリモート</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>副業可</span><span>服装自由</span></div><span class="jc-co">シリーズB スタートアップ<i>No.0136</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">金融・保険</span><strong>法人コンサルティング</strong><span class="jc-no">No.0153</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜900</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>年休125日</span><span>産育休実績</span></div><span class="jc-co">大手金融</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">金融・保険</span><strong>法人コンサルティング</strong></div><img class="jc-ph" src="images/job-finance.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜900</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>年休125日</span><span>産育休実績</span></div><span class="jc-co">大手金融<i>No.0153</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">販売・サービス</span><strong>店長候補</strong><span class="jc-no">No.0170</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜500</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>未経験歓迎</span></div><span class="jc-co">全国チェーン</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">販売・サービス</span><strong>店長候補</strong></div><img class="jc-ph" src="images/job-retail.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜500</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>未経験歓迎</span></div><span class="jc-co">全国チェーン<i>No.0170</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">IT・Web</span><strong>プロダクトマネージャー</strong><span class="jc-no">No.0017</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>700〜1,000</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>リモート可</span><span>裁量労働</span></div><span class="jc-co">東証プライム上場 SaaS</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">IT・Web</span><strong>プロダクトマネージャー</strong></div><img class="jc-ph" src="images/job-it.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>700〜1,000</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>リモート可</span><span>裁量労働</span></div><span class="jc-co">東証プライム上場 SaaS<i>No.0017</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">営業</span><strong>法人営業（新規開拓）</strong><span class="jc-no">No.0034</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>450〜700</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京・大阪</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>インセンティブ</span><span>未経験歓迎</span></div><span class="jc-co">メガベンチャー</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">営業</span><strong>法人営業（新規開拓）</strong></div><img class="jc-ph" src="images/job-sales.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>450〜700</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京・大阪</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>インセンティブ</span><span>未経験歓迎</span></div><span class="jc-co">メガベンチャー<i>No.0034</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">建設・不動産</span><strong>施工管理</strong><span class="jc-no">No.0051</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜800</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>資格取得支援</span><span>転勤相談可</span></div><span class="jc-co">業界シェア上位</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">建設・不動産</span><strong>施工管理</strong></div><img class="jc-ph" src="images/job-const.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜800</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>資格取得支援</span><span>転勤相談可</span></div><span class="jc-co">業界シェア上位<i>No.0051</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">製造・工場</span><strong>生産管理</strong><span class="jc-no">No.0068</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>400〜600</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>愛知</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>年休125日</span></div><span class="jc-co">老舗メーカー</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">製造・工場</span><strong>生産管理</strong></div><img class="jc-ph" src="images/job-factory.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>400〜600</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>愛知</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>年休125日</span></div><span class="jc-co">老舗メーカー<i>No.0068</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">医療・介護</span><strong>サービス提供責任者</strong><span class="jc-no">No.0085</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜450</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>神奈川</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>賞与年2回</span><span>資格活かせる</span></div><span class="jc-co">地域の優良企業</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">医療・介護</span><strong>サービス提供責任者</strong></div><img class="jc-ph" src="images/job-care.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜450</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>神奈川</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>賞与年2回</span><span>資格活かせる</span></div><span class="jc-co">地域の優良企業<i>No.0085</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">物流・運輸</span><strong>ドライバー</strong><span class="jc-no">No.0102</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>300〜420</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>埼玉</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>未経験歓迎</span><span>面接1回</span></div><span class="jc-co">地場物流会社</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">物流・運輸</span><strong>ドライバー</strong></div><img class="jc-ph" src="images/job-logi.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>300〜420</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>埼玉</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>未経験歓迎</span><span>面接1回</span></div><span class="jc-co">地場物流会社<i>No.0102</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">管理部門</span><strong>経理（マネージャー候補）</strong><span class="jc-no">No.0119</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜750</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>在宅併用</span><span>フレックス</span></div><span class="jc-co">上場グループ</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">管理部門</span><strong>経理（マネージャー候補）</strong></div><img class="jc-ph" src="images/job-office.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜750</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>東京</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>在宅併用</span><span>フレックス</span></div><span class="jc-co">上場グループ<i>No.0119</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">IT・Web</span><strong>Webエンジニア</strong><span class="jc-no">No.0136</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>550〜850</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>フルリモート</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>副業可</span><span>服装自由</span></div><span class="jc-co">シリーズB スタートアップ</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">IT・Web</span><strong>Webエンジニア</strong></div><img class="jc-ph" src="images/job-it.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>550〜850</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>フルリモート</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>副業可</span><span>服装自由</span></div><span class="jc-co">シリーズB スタートアップ<i>No.0136</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">金融・保険</span><strong>法人コンサルティング</strong><span class="jc-no">No.0153</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜900</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>年休125日</span><span>産育休実績</span></div><span class="jc-co">大手金融</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">金融・保険</span><strong>法人コンサルティング</strong></div><img class="jc-ph" src="images/job-finance.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>500〜900</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>年休125日</span><span>産育休実績</span></div><span class="jc-co">大手金融<i>No.0153</i></span></div>
         </article>
         <article class="jc">
-          <div class="jc-h"><span class="jc-tag">販売・サービス</span><strong>店長候補</strong><span class="jc-no">No.0170</span></div>
-          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜500</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div><div><dt>雇用</dt><dd>正社員</dd></div></dl></div>
-          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>未経験歓迎</span></div><span class="jc-co">全国チェーン</span></div>
+          <div class="jc-h"><div class="jc-i"><span class="jc-tag">販売・サービス</span><strong>店長候補</strong></div><img class="jc-ph" src="images/job-retail.webp" alt="" decoding="async"/></div>
+          <div class="jc-b"><p class="jc-sal"><i>年収</i><b>350〜500</b><em>万円</em></p><dl class="jc-m"><div><dt>勤務地</dt><dd>全国</dd></div></dl></div>
+          <div class="jc-f"><div class="jc-tags"><span>転勤なし</span><span>未経験歓迎</span></div><span class="jc-co">全国チェーン<i>No.0170</i></span></div>
         </article>
       </div>
+    <p class="jslide-n">正社員求人を中心にご紹介しています。</p>
+    <p class="nind-t">取り扱い企業</p>
+    <div class="ncomp fu">
+      <span>東証プライム上場</span>
+      <span>メガベンチャー</span>
+      <span>スタートアップ</span>
+      <span>外資系</span>
+      <span>老舗メーカー</span>
+      <span>地域No.1企業</span>
+    </div>
+    <p class="ncomp-n fu">上場企業から成長スタートアップまで、<br><b>規模・フェーズを問わず幅広く</b>。</p>
+
     </div>
 
     <p class="nind-t">対応業種</p>
@@ -909,28 +957,23 @@ html:not(.js) .steps::before{transform:scaleY(1)}
         <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10.5M10 20V4.5M16 20v-7M22 20.5H2"/></svg><span>金融・保険</span></div>
         <div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-1.8H4zM20 4.5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-1.8h6z"/></svg><span>教育・公務</span></div>
     </div>
+    <p class="ni-note fu"><b>未経験OK</b><span>第二新卒・異業種からの転職も、<br>全業種で取り扱いがあります。</span></p>
     <p class="nind-t">対応年収帯</p>
     <div class="nsal fu">
-      <div class="nsal-scale" aria-hidden="true"><i></i><i></i><i></i></div>
-      <span>〜300万</span>
-      <span>300万台</span>
-      <span>400万台</span>
-      <span>500万台</span>
-      <span>600万台</span>
-      <span>700万台</span>
-      <span>800万台</span>
-      <span>1,000万〜</span>
-    </div>
-    <p class="nsal-n fu">未経験・第二新卒からハイクラスまで。<br>ご相談の中心は<b>年収300〜600万円台</b>です。</p>
-    <div class="nadv fu">
-      <span class="nadv-l">さらに</span>
-      <div class="nadv-row">
-        <div class="nadv-c"><span>MAIN</span><b>メイン<br>エージェント</b></div>
-        <i>＋</i>
-        <div class="nadv-c nadv-c--a"><span>ADVISOR</span><b>専門<br>アドバイザー</b></div>
+      <p class="nsal-cap"><b>ご相談の中心</b></p>
+      <div class="nsal-g">
+        <div class="nb" style="--h:26%"><i></i><span>〜300</span></div>
+        <div class="nb nb--on" style="--h:62%"><i></i><span>300</span></div>
+        <div class="nb nb--on" style="--h:88%"><i></i><span>400</span></div>
+        <div class="nb nb--on" style="--h:100%"><i></i><span>500</span></div>
+        <div class="nb nb--on" style="--h:76%"><i></i><span>600</span></div>
+        <div class="nb" style="--h:48%"><i></i><span>700</span></div>
+        <div class="nb" style="--h:30%"><i></i><span>800</span></div>
+        <div class="nb" style="--h:20%"><i></i><span>1,000〜</span></div>
       </div>
-      <p>各部門に精通したエージェントが在籍。<br>メイン担当に<b>専門アドバイザーを追加</b>することもできます。</p>
+      <p class="nsal-unit">万円台</p>
     </div>
+    <p class="nsal-n fu">未経験・第二新卒からハイクラスまで対応。<br>もっとも多いのは<b>年収300〜600万円台</b>のご相談です。</p>
   </section>
 
 
@@ -954,7 +997,7 @@ html:not(.js) .steps::before{transform:scaleY(1)}
       </div>
       <span class="vs-x">VS</span>
       <div class="vs-c vs-c--hh">
-        <span class="vs-t">HEADHUNTER</span>
+        <span class="vs-t">HEAD HUNTER</span>
         <ul>
           <li>紹介がある方だけ</li>
           <li>紹介でつながる担当</li>
@@ -973,9 +1016,22 @@ html:not(.js) .steps::before{transform:scaleY(1)}
     </div>
 
     <div class="ab-flow fu">
-      <span>対話</span><i>→</i><span>整理</span><i>→</i><span>提案</span>
+      <div class="afs" data-n="01"><b>対話</b><span>経歴と価値観を伺う</span></div>
+      <i>→</i>
+      <div class="afs" data-n="02"><b>整理</b><span>強みと方向性を言語化</span></div>
+      <i>→</i>
+      <div class="afs" data-n="03"><b>提案</b><span>理由とセットで求人を</span></div>
     </div>
-    <p class="ab-sum fu">紹介でつながったご縁だから、<br><b>その場かぎりではない対応</b>をお約束します。</p>
+    <div class="nadv fu">
+      <span class="nadv-l">さらに</span>
+      <div class="nadv-row">
+        <div class="nadv-c"><span>MAIN</span><b>メイン<br>エージェント</b></div>
+        <i>＋</i>
+        <div class="nadv-c nadv-c--a"><span>ADVISOR</span><b>専門<br>アドバイザー</b></div>
+      </div>
+      <p>各部門に精通したエージェントが在籍。<br>メイン担当に<b>専門アドバイザーを追加</b>することもできます。</p>
+    </div>
+    <p class="ab-sum fu"><span>紹介でつながったご縁だから、<br><b>その場かぎりではない対応</b>をお約束します。</span></p>
   </section>
 
   <!-- VALUE -->
@@ -984,11 +1040,11 @@ html:not(.js) .steps::before{transform:scaleY(1)}
       <span class="eb">VALUE</span>
       <h2>一人ひとりに<br><span class="mk">向き合う4つの姿勢。</span></h2>
     </div>
-    <div class="nlist fu">
-      <div class="nrow"><b>01</b><div><strong>あなたを理解した担当者</strong><span>経歴だけでなく、価値観まで踏まえて考えます。</span></div></div>
-      <div class="nrow"><b>02</b><div><strong>「数」ではなく「理由」で提案</strong><span>なぜこの求人なのか、までお伝えします。</span></div></div>
-      <div class="nrow"><b>03</b><div><strong>転職を急がせません</strong><span>「今の会社に残る」という結論でも問題ありません。</span></div></div>
-      <div class="nrow"><b>04</b><div><strong>入社まで一貫サポート</strong><span>書類・面接・企業調整・条件確認まで。</span></div></div>
+    <div class="nlist">
+      <article class="nrow fu"><span class="nno">01</span><div><strong>あなたを理解した担当者</strong><span>経歴だけでなく、価値観まで踏まえて考えます。</span></div></article>
+      <article class="nrow fu"><span class="nno">02</span><div><strong>「数」ではなく「理由」で提案</strong><span>なぜこの求人なのか、までお伝えします。</span></div></article>
+      <article class="nrow fu"><span class="nno">03</span><div><strong>転職を急がせません</strong><span>「今の会社に残る」という結論でも問題ありません。</span></div></article>
+      <article class="nrow fu"><span class="nno">04</span><div><strong>入社まで一貫サポート</strong><span>書類・面接・企業調整・条件確認まで。</span></div></article>
     </div>
   </section>
 
@@ -999,12 +1055,12 @@ html:not(.js) .steps::before{transform:scaleY(1)}
       <h2>相談から入社まで、<br><span class="mk">まるごとサポート。</span></h2>
     </div>
     <div class="g2 fu">
-      <div class="tile"><i>01</i><strong>キャリア相談</strong><span>これからを一緒に整理</span></div>
-      <div class="tile"><i>02</i><strong>求人紹介</strong><span>経験と希望を踏まえて</span></div>
-      <div class="tile"><i>03</i><strong>応募書類</strong><span>作成と改善をサポート</span></div>
-      <div class="tile"><i>04</i><strong>面接対策</strong><span>企業に合わせて準備</span></div>
-      <div class="tile"><i>05</i><strong>企業との調整</strong><span>日程も選考もお任せ</span></div>
-      <div class="tile"><i>06</i><strong>条件確認・入社</strong><span>年収交渉から手続きまで</span></div>
+      <div class="tile"><b>01</b><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h13v9H8l-5 4V5Z"/><path d="M18.5 9H21v9l-3-2h-5"/></svg></i><strong>キャリア相談</strong><span>これからを一緒に整理</span></div>
+      <div class="tile"><b>02</b><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="11" height="15" rx="2"/><path d="M7.5 7h4M7.5 10.5h3"/><circle cx="16" cy="15" r="3.4"/><path d="M18.6 17.6L21.5 20.5"/></svg></i><strong>求人紹介</strong><span>経験と希望を踏まえて</span></div>
+      <div class="tile"><b>03</b><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 3.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h6"/><path d="M13.5 3.5l4 4v3"/><path d="M20.6 12.4l-6.1 6.1-2.6.6.6-2.6 6.1-6.1z"/></svg></i><strong>応募書類</strong><span>作成と改善をサポート</span></div>
+      <div class="tile"><b>04</b><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="8" r="3.2"/><path d="M3 20.5a5.5 5.5 0 0 1 11 0"/><path d="M14.5 3.5H21v6l-2.4-1.7h-4.1z"/></svg></i><strong>面接対策</strong><span>企業に合わせて準備</span></div>
+      <div class="tile"><b>05</b><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="M7.5 14h3M7.5 17.3h6"/></svg></i><strong>企業との調整</strong><span>日程も選考もお任せ</span></div>
+      <div class="tile"><b>06</b><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M7.8 8.2l1.7 1.7 3.1-3.2"/><path d="M7.8 14.6l1.7 1.7 3.1-3.2"/><path d="M15.2 8.6H17M15.2 15H17"/></svg></i><strong>条件確認・入社</strong><span>年収交渉から手続きまで</span></div>
     </div>
   </section>
 
@@ -1054,8 +1110,6 @@ html:not(.js) .steps::before{transform:scaleY(1)}
       <div class="faq-a"><i>A</i><p>かかりません。採用企業から紹介料をいただく仕組みです。</p></div></details>
     <details class="fu"><summary><i>Q</i>紹介されたら応募が必要？<b>+</b></summary>
       <div class="faq-a"><i>A</i><p>いいえ。興味を持った場合のみ応募いただきます。</p></div></details>
-    <details class="fu"><summary><i>Q</i>個人情報が勝手に送られる？<b>+</b></summary>
-      <div class="faq-a"><i>A</i><p>ありません。必ずご本人の意思を確認したうえで行います。</p></div></details>
     <details class="fu"><summary><i>Q</i>どのような求人がありますか？<b>+</b></summary>
       <div class="faq-a"><i>A</i><p>時期により異なります。ご希望を伺ったうえでご案内します。</p></div></details>
   </section>
@@ -1064,22 +1118,27 @@ html:not(.js) .steps::before{transform:scaleY(1)}
   <section class="closing" id="closing">
     <div class="sh fu">
       <span class="eb">OUR STANCE</span>
-      <h2>選択肢は、<br><span class="mk">知ってから決めればいい。</span></h2>
-      <p>転職ありきのサービスではありません。<br>納得したうえでキャリアを決めることを、大切にしています。</p>
+      <h2>紹介制のパーソナル<br><span class="mk">転職エージェント。</span></h2>
+      <p>転職ありきのサービスではありません。<br>話した結果「今の会社に残る」でも、まったく問題ありません。</p>
     </div>
+    <p class="cl-guide fu"><b>お近くの担当エージェント</b>まで<br>ご相談くださいませ。</p>
     <div class="cl-chips fu"><span>有料職業紹介事業</span><span>審査制エージェント</span><span>全国オンライン対応</span></div>
   </section>
 
   <footer class="foot">
-    <p class="foot-logo"><svg viewBox="0 0 26 26" width="17" height="17" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEADHUNTER</span></p>
+    <p class="foot-logo"><svg viewBox="0 0 26 26" width="17" height="17" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEAD HUNTER</span></p>
     <dl>
       <dt>事業区分</dt><dd>有料職業紹介事業</dd>
       <dt>許可番号</dt><dd>26-ユ-300711（厚生労働大臣許可）</dd>
-      <dt>所在地</dt><dd class="tbd">〇〇</dd>
-      <dt>お問い合わせ</dt><dd class="tbd">〇〇</dd>
     </dl>
-    <p class="foot-links"><a href="#">プライバシーポリシー</a><a href="#">利用規約</a><a href="#">職業紹介に関する表記</a></p>
-    <p class="cr">© HEADHUNTER</p>
+    <p class="foot-links"><a href="#">運営会社</a><a href="#">プライバシーポリシー</a><a href="#">利用規約</a><a href="#">職業紹介に関する表記</a></p>
+    <small>
+      ※本ページに掲載している人物写真は、AIで生成したイメージです。<br>
+      ※エージェントの経歴・掲載求人はいずれも一例であり、実在の個人・求人を示すものではありません。<br>
+      ※取り扱い求人および紹介可能な求人数は、時期・ご経歴・求人企業の採用状況により異なります。<br>
+      ※対応業種は主なものを掲載しています。記載のない業種もご相談いただけます。
+    </small>
+    <p class="cr">© HEAD HUNTER</p>
   </footer>
 
 </div>
