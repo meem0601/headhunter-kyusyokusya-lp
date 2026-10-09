@@ -1,0 +1,23 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>公開準備と引継ぎ｜HEAD HUNTER</title><style>body{font:16px/1.9 "Yu Gothic",Meiryo,sans-serif;color:#1e1919;background:#f7f5f2;margin:0}main{max-width:840px;padding:32px 24px;margin:auto}h1{font-size:28px}h2{font-size:21px;margin-top:32px}a{color:#0000d4}code{overflow-wrap:anywhere}.note{background:#eef0ff;padding:16px}li{margin:10px 0}</style></head><body><main>
+<h1>社員確認後に公開するための準備</h1>
+<p class="note">現在は確認・準備段階。本番未反映。社員確認だけで自動公開せず、権限者の明示承認を受けてから反映します。</p>
+<h2>社員さんへ渡すもの</h2>
+<p>確定した公開先URL（現時点では未公開）</p>
+<ul><li>利用規約：<code>https://career.head-hunter.jp/terms</code></li><li>プライバシーポリシー：<code>https://career.head-hunter.jp/privacy</code></li></ul>
+<p>アンケートに設定するリンクはプライバシーポリシーのURL1つだけです。利用規約はLPフッターから案内します。元のフリーランス向けページは変更せず、一般求職者向けの2ページを追加します。URLが確定したことと、ページが公開済みであることは区別します。</p>
+<ul><li><a href="社員向け説明.html">変更説明・確認事項</a></li><li><a href="../terms.html">一般求職者向け利用規約の文案</a></li><li><a href="../privacy.html">一般求職者向けプライバシーポリシーの文案</a></li></ul>
+<h2>用意できているもの</h2>
+<p>2つの実ページ、共通デザイン、/terms・/privacyへのルーティング、LPフッターからのリンクを同じ作業ブランチに用意しています。320px・390px・1280pxでローカル表示とリンクを確認済みです。社員向け資料は本番の配信対象から除外しています。</p>
+<p>高以来陸様から確認済みの運用：PR作成・マージまでは本人のGitHubアカウント takariku0822 を使用し、その後は数分おきの自動デプロイを待ちます。手動デプロイは行わず、配布完了と本番表示を別途確認します。</p>
+<h2>公開までの順序</h2>
+<ol><li>社員さんが文面と実運用を確認し、必要な修正を返す。利用規約のLINE受領方法・申込み有効期間・案内PDFの扱いも確認する。</li><li>プラポリを修正した場合は、求職者フォームで記録する同意文面の版も更新し、ページとフォームで整合を確認する。</li><li>公開予定URLを確定する。第一候補は <code>https://career.head-hunter.jp/terms</code> と <code>https://career.head-hunter.jp/privacy</code>。</li><li>GitHubの権限者が <code>takariku0822</code> のLPリポジトリへの書き込み権限を確認する。現時点のAPI確認ではpush=false。権限が付くまで別アカウントや別経路でpushしない。</li><li>最新mainとの差分、CI、レビュー、HEAD SHAを確認し、Draft PRを作成・更新する。権限者の明示的な公開・マージ承認後にsquash mergeする。</li><li>Git連携の配布が完了したことを確認する。重複する手動Vercelデプロイは行わない。</li><li>本番の両ページが200で表示されること、LPフッターから移動できること、本文・メタ情報・会社情報が承認版と一致することを読み取り確認する。フォームへ未公開URLは設定しない。</li><li>公開確認済みプラポリURLを使って、L Harnessのフォーム説明をリンク表示へ切り替える。フォーム側のPR #712のレビュー・既存チェックの問題解消・公開承認も別途必要。</li></ol>
+<h2>フォームへのURL設定はすぐに生成できる</h2>
+<p>L Harnessに、承認・公開確認済みURLを引数として受け取り、対象フォームの説明文だけを更新するSQL生成ツールを用意しました。</p>
+<p><code>node ops/referral-consultation-privacy-link.mjs &lt;承認・公開確認済みURL&gt;</code></p>
+<p>SQLを表示するだけで、本番への接続・適用・フォーム有効化は行いません。初回のフォーム設定を作成した後、権限者が生成SQLを確認して適用します。対象フォームIDとLINEアカウントIDの両方で範囲を限定し、設問・同意必須・紹介情報・既存回答は変更しません。</p>
+<p>リンクを開いたかどうかは送信条件にしません。閲覧しなくても、必須の「同意する」を回答すれば先へ進めます。</p>
+<h2>不具合が見つかった場合</h2>
+<p>フォームは既存手順で無効化し、従来の入口パックへ戻します。保存済み回答を削除しません。法務ページを戻す場合は問題と影響を確認し、元のGitコミットを特定して通常のrevert PRで対応します。force pushやmainの履歴改変は行いません。</p>
+<h2>現在の状態</h2>
+<p>LP：ローカル実装・コミット済み、pushは権限待ち、PR未作成、未マージ・本番未反映。L Harness：Draft PR #712、未マージ・本番未反映。文面確認・権限・公開承認が揃ってから公開作業を開始します。</p>
+</main></body></html>
