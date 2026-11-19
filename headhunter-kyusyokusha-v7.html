@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>HEAD HUNTER｜完全紹介制の転職支援</title>
-<meta name="description" content="HEAD HUNTERは、ご紹介のある方だけがご利用いただける完全紹介制の転職支援サービスです。審査を通過した転職エージェントが、厚生労働大臣の許可を受けた有料職業紹介事業として支援します。"/>
+<title>SCOUTIA｜完全紹介制の転職支援</title>
+<meta name="description" content="SCOUTIAは、ご紹介のある方だけがご利用いただける完全紹介制の転職支援サービスです。審査を通過した転職エージェントが、厚生労働大臣の許可を受けた有料職業紹介事業として支援します。"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet"/>
@@ -35,7 +35,7 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
   .side-l,.side-r{display:flex;flex-direction:column;position:fixed;z-index:2;width:266px}
   .side-l{left:max(28px,calc(50% - 215px - 296px));top:38px;bottom:38px;justify-content:space-between}
   .side-logo{display:flex;align-items:center;gap:9px}
-  .side-logo span{font-family:var(--fe);font-size:15px;font-weight:700;letter-spacing:.13em}
+  .side-logo .career-brand-logo{display:block;width:178px;height:auto}
   .side-copy{font-family:var(--fe);font-size:11px;color:var(--mute)}
   .side-r{right:max(28px,calc(50% - 215px - 296px));top:50%;transform:translateY(-50%);gap:12px}
   .side-menu-t{font-family:var(--fe);font-size:12.5px;font-weight:700;font-style:italic;letter-spacing:.14em;color:var(--blue)}
@@ -51,7 +51,7 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 
 .head{position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 var(--page-x);background:rgba(255,255,255,.97);border-bottom:1px solid var(--border)}
 .head-l{display:flex;align-items:center;gap:8px}
-.head-l span{font-family:var(--fe);font-size:13px;font-weight:700;letter-spacing:.13em}
+.head-l .career-brand-logo{display:block;width:155px;height:auto}
 .head em{font-style:normal;font-size:10.5px;font-weight:700;color:var(--mute)}
 .head em b{color:var(--text);font-size:12px;margin-left:5px}
 
@@ -207,7 +207,7 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 /* footer */
 .foot{background:#141414;color:rgba(255,255,255,.6);padding:30px var(--page-x) 26px;text-align:center;font-size:11.5px}
 .foot-logo{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px}
-.foot-logo span{font-family:var(--fe);font-size:14px;font-weight:700;letter-spacing:.13em;color:#fff}
+.foot-logo .career-brand-logo{display:block;width:154px;height:auto}
 .foot dl{display:grid;grid-template-columns:auto 1fr;gap:5px 12px;text-align:left;line-height:1.8;margin-bottom:16px}
 .foot dt{font-weight:700;color:rgba(255,255,255,.85);white-space:nowrap}
 .foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;margin-bottom:12px}
@@ -672,8 +672,8 @@ html:not(.js) .steps::before{transform:scaleY(1)}
 
 
 <aside class="side-l" aria-hidden="true">
-  <p class="side-logo"><svg viewBox="0 0 26 26" width="22" height="22" fill="#1E1919" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEAD HUNTER</span></p>
-  <p class="side-copy">© HEAD HUNTER</p>
+  <p class="side-logo"><img class="career-brand-logo" src="/assets/scoutia-blue.svg" alt="SCOUTIA" width="939" height="240"/></p>
+  <p class="side-copy">© SCOUTIA</p>
 </aside>
 
 <aside class="side-r" aria-label="ページメニュー">
@@ -695,7 +695,7 @@ html:not(.js) .steps::before{transform:scaleY(1)}
 <div class="col">
 
   <header class="head">
-    <p class="head-l"><svg viewBox="0 0 26 26" width="20" height="20" fill="#1E1919" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEAD HUNTER</span></p>
+    <p class="head-l"><img class="career-brand-logo" src="/assets/scoutia-blue.svg" alt="SCOUTIA" width="939" height="240"/></p>
   </header>
 
   <!-- HERO -->
@@ -775,7 +775,7 @@ html:not(.js) .steps::before{transform:scaleY(1)}
     </div>
     <div class="wsum fu">
       <span>その悩み、すべて</span>
-      <strong><i>HEAD HUNTER</i>が</strong>
+      <strong><i>SCOUTIA</i>が</strong>
       <strong class="u">解決します。</strong>
     </div>
   </section>
@@ -997,7 +997,7 @@ html:not(.js) .steps::before{transform:scaleY(1)}
       </div>
       <span class="vs-x">VS</span>
       <div class="vs-c vs-c--hh">
-        <span class="vs-t">HEAD HUNTER</span>
+        <span class="vs-t">SCOUTIA</span>
         <ul>
           <li>紹介がある方だけ</li>
           <li>紹介でつながる担当</li>
@@ -1126,7 +1126,7 @@ html:not(.js) .steps::before{transform:scaleY(1)}
   </section>
 
   <footer class="foot">
-    <p class="foot-logo"><svg viewBox="0 0 26 26" width="17" height="17" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="0" width="7" height="7" rx="1.8"/><rect x="9" y="0" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="0" width="7" height="7" rx="1.8"/><rect x="0" y="9" width="7" height="7" rx="1.8"/><rect x="9" y="9" width="7" height="7" rx="1.8"/><rect x="18" y="9" width="7" height="7" rx="1.8"/><rect x="0" y="18" width="7" height="7" rx="1.8"/><rect x="9" y="18" width="7" height="7" rx="1.8" opacity=".3"/><rect x="18" y="18" width="7" height="7" rx="1.8"/></svg><span>HEAD HUNTER</span></p>
+    <p class="foot-logo"><img class="career-brand-logo" src="/assets/scoutia-white.svg" alt="SCOUTIA" width="939" height="240"/></p>
     <dl>
       <dt>事業区分</dt><dd>有料職業紹介事業</dd>
       <dt>許可番号</dt><dd>26-ユ-300711（厚生労働大臣許可）</dd>
@@ -1138,7 +1138,7 @@ html:not(.js) .steps::before{transform:scaleY(1)}
       ※取り扱い求人および紹介可能な求人数は、時期・ご経歴・求人企業の採用状況により異なります。<br>
       ※対応業種は主なものを掲載しています。記載のない業種もご相談いただけます。
     </small>
-    <p class="cr">© HEAD HUNTER</p>
+    <p class="cr">© SCOUTIA</p>
   </footer>
 
 </div>
