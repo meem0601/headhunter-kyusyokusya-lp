@@ -31,7 +31,7 @@ class CareerBrand(unittest.TestCase):
     def test_legal_terms_and_hrefs_change_only_by_brand(self):
         for name in PAGES[1:]:
             original = subprocess.check_output(['git', 'show', '3dc50dc:' + name], cwd=ROOT, text=True)
-            self.assertEqual((ROOT / name).read_text(), original.replace('HEAD HUNTER', 'SCOUTIA'))
+            self.assertEqual((ROOT / name).read_text(), original.replace('HEAD HUNTER', 'SCOUTIA').replace('https://career.head-hunter.jp/', 'https://career.scoutia.jp/'))
 
     def test_home_navigation_and_behaviour_are_preserved(self):
         original = subprocess.check_output(['git', 'show', '3dc50dc:' + HOME], cwd=ROOT, text=True)
