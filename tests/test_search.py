@@ -1,6 +1,5 @@
 import re
 import unittest
-import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,7 +13,14 @@ class SearchMetadata(unittest.TestCase):
                 self.assertEqual(re.findall(r'<link rel="canonical" href="([^"]+)"', raw), [BASE + path])
                 self.assertEqual(re.findall(r'<meta property="og:url" content="([^"]+)"', raw), [BASE + path])
 
-    def test_only_top_advertised_in_sitemap(self):
-        root = ET.parse(ROOT / 'sitemap.xml').getroot()
-        self.assertEqual([n.text for n in root.findall('.//{*}loc')], [BASE + '/'])
-        self.assertIn('Sitemap: ' + BASE + '/sitemap.xml', (ROOT / 'robots.txt').read_text())
+    def test_google_excludes_only_the_landing_page(self):
+        for name, expected in [('headhunter-kyusyokusha-v7.html', ['noindex']), ('privacy.html', []), ('terms.html', [])]:
+            with self.subTest(name=name):
+                raw = (ROOT / name).read_text()
+                self.assertEqual(re.findall(r'<meta name="googlebot" content="([^"]+)"', raw), expected)
+
+    def test_robots_allows_google_to_read_noindex(self):
+        self.assertEqual((ROOT / 'robots.txt').read_text().splitlines(), ['User-agent: *', 'Disallow:'])
+
+    def test_no_sitemap_advertising_the_excluded_page(self):
+        self.assertFalse((ROOT / 'sitemap.xml').exists())
